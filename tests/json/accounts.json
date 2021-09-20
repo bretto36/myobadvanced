@@ -1,0 +1,287 @@
+[
+  {
+    "id": "b49ee0b4-b440-433e-ae89-465daba80d18",
+    "rowNumber": 1,
+    "note": {
+      "value": ""
+    },
+    "AccountCD": {
+      "value": "100000"
+    },
+    "AccountClass": {
+      "value": "CASHASSET"
+    },
+    "AccountGroup": {},
+    "AccountID": {
+      "value": 1165
+    },
+    "Active": {
+      "value": true
+    },
+    "CashAccount": {
+      "value": true
+    },
+    "ChartOfAccountsOrder": {
+      "value": 2
+    },
+    "ConsolidationAccount": {},
+    "CreatedDateTime": {
+      "value": "2014-10-23T01:01:51.33+00:00"
+    },
+    "CurrencyID": {
+      "value": "AUD"
+    },
+    "Description": {
+      "value": "Petty Cash AUD"
+    },
+    "LastModifiedDateTime": {
+      "value": "2014-10-23T01:24:34.953+00:00"
+    },
+    "PostOption": {
+      "value": "Detail"
+    },
+    "RequireUnits": {
+      "value": false
+    },
+    "RevaluationRateType": {},
+    "Secured": {
+      "value": false
+    },
+    "TaxCategory": {},
+    "Type": {
+      "value": "Asset"
+    },
+    "UseDefaultSubaccount": {
+      "value": false
+    },
+    "custom": {}
+  },
+  {
+    "id": "28e4659f-74e9-40c9-b01f-8f64c7ab9f22",
+    "rowNumber": 2,
+    "note": {
+      "value": ""
+    },
+    "AccountCD": {
+      "value": "100010"
+    },
+    "AccountClass": {
+      "value": "CASHASSET"
+    },
+    "AccountGroup": {},
+    "AccountID": {
+      "value": 1166
+    },
+    "Active": {
+      "value": true
+    },
+    "CashAccount": {
+      "value": true
+    },
+    "ChartOfAccountsOrder": {
+      "value": 2
+    },
+    "ConsolidationAccount": {},
+    "CreatedDateTime": {
+      "value": "2014-10-23T01:01:51.343+00:00"
+    },
+    "CurrencyID": {
+      "value": "AUD"
+    },
+    "Description": {
+      "value": "Cheque Account - AUD"
+    },
+    "LastModifiedDateTime": {
+      "value": "2014-10-23T01:25:13.253+00:00"
+    },
+    "PostOption": {
+      "value": "Detail"
+    },
+    "RequireUnits": {
+      "value": false
+    },
+    "RevaluationRateType": {},
+    "Secured": {
+      "value": false
+    },
+    "TaxCategory": {},
+    "Type": {
+      "value": "Asset"
+    },
+    "UseDefaultSubaccount": {
+      "value": false
+    },
+    "custom": {}
+  },
+  {
+    "id": "30d9356b-8da7-47fd-be8b-16d4df2a1b7b",
+    "rowNumber": 3,
+    "note": {
+      "value": ""
+    },
+    "AccountCD": {
+      "value": "100020"
+    },
+    "AccountClass": {
+      "value": "CASHASSET"
+    },
+    "AccountGroup": {},
+    "AccountID": {
+      "value": 1167
+    },
+    "Active": {
+      "value": true
+    },
+    "CashAccount": {
+      "value": true
+    },
+    "ChartOfAccountsOrder": {
+      "value": 2
+    },
+    "ConsolidationAccount": {},
+    "CreatedDateTime": {
+      "value": "2014-10-23T01:01:51.347+00:00"
+    },
+    "CurrencyID": {
+      "value": "AUD"
+    },
+    "Description": {
+      "value": "Savings Account - AUD"
+    },
+    "LastModifiedDateTime": {
+      "value": "2014-10-23T01:27:11.76+00:00"
+    },
+    "PostOption": {
+      "value": "Detail"
+    },
+    "RequireUnits": {
+      "value": false
+    },
+    "RevaluationRateType": {},
+    "Secured": {
+      "value": false
+    },
+    "TaxCategory": {},
+    "Type": {
+      "value": "Asset"
+    },
+    "UseDefaultSubaccount": {
+      "value": false
+    },
+    "custom": {}
+  },
+  {
+    "id": "0a38a85c-87f3-4fc4-9223-6ed6b2d45a0b",
+    "rowNumber": 4,
+    "note": {
+      "value": ""
+    },
+    "AccountCD": {
+      "value": "100030"
+    },
+    "AccountClass": {
+      "value": "CASHASSET"
+    },
+    "AccountGroup": {},
+    "AccountID": {
+      "value": 1168
+    },
+    "Active": {
+      "value": true
+    },
+    "CashAccount": {
+      "value": true
+    },
+    "ChartOfAccountsOrder": {
+      "value": 2
+    },
+    "ConsolidationAccount": {},
+    "CreatedDateTime": {
+      "value": "2014-10-23T01:01:51.347+00:00"
+    },
+    "CurrencyID": {
+      "value": "AUD"
+    },
+    "Description": {
+      "value": "Trading Bank Account - AUD"
+    },
+    "LastModifiedDateTime": {
+      "value": "2014-10-23T01:27:55.33+00:00"
+    },
+    "PostOption": {
+      "value": "Detail"
+    },
+    "RequireUnits": {
+      "value": false
+    },
+    "RevaluationRateType": {},
+    "Secured": {
+      "value": false
+    },
+    "TaxCategory": {},
+    "Type": {
+      "value": "Asset"
+    },
+    "UseDefaultSubaccount": {
+      "value": false
+    },
+    "custom": {}
+  },
+  {
+    "id": "f986cbeb-b2a7-460c-9206-0525d94f5ee4",
+    "rowNumber": 5,
+    "note": {
+      "value": ""
+    },
+    "AccountCD": {
+      "value": "100035"
+    },
+    "AccountClass": {
+      "value": "CASHASSET"
+    },
+    "AccountGroup": {},
+    "AccountID": {
+      "value": 1175
+    },
+    "Active": {
+      "value": true
+    },
+    "CashAccount": {
+      "value": true
+    },
+    "ChartOfAccountsOrder": {
+      "value": 2
+    },
+    "ConsolidationAccount": {},
+    "CreatedDateTime": {
+      "value": "2014-10-23T01:01:51.35+00:00"
+    },
+    "CurrencyID": {
+      "value": "AUD"
+    },
+    "Description": {
+      "value": "Payroll Cheque Account - AUD"
+    },
+    "LastModifiedDateTime": {
+      "value": "2016-02-29T09:23:20.093+00:00"
+    },
+    "PostOption": {
+      "value": "Detail"
+    },
+    "RequireUnits": {
+      "value": false
+    },
+    "RevaluationRateType": {},
+    "Secured": {
+      "value": false
+    },
+    "TaxCategory": {},
+    "Type": {
+      "value": "Asset"
+    },
+    "UseDefaultSubaccount": {
+      "value": false
+    },
+    "custom": {}
+  }
+]

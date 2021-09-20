@@ -1,0 +1,57 @@
+{
+  "id": "b49ee0b4-b440-433e-ae89-465daba80d18",
+  "rowNumber": 1,
+  "note": {
+    "value": ""
+  },
+  "AccountCD": {
+    "value": "100000"
+  },
+  "AccountClass": {
+    "value": "CASHASSET"
+  },
+  "AccountGroup": {},
+  "AccountID": {
+    "value": 1165
+  },
+  "Active": {
+    "value": true
+  },
+  "CashAccount": {
+    "value": true
+  },
+  "ChartOfAccountsOrder": {
+    "value": 2
+  },
+  "ConsolidationAccount": {},
+  "CreatedDateTime": {
+    "value": "2014-10-23T01:01:51.33+00:00"
+  },
+  "CurrencyID": {
+    "value": "AUD"
+  },
+  "Description": {
+    "value": "Petty Cash AUD"
+  },
+  "LastModifiedDateTime": {
+    "value": "2014-10-23T01:24:34.953+00:00"
+  },
+  "PostOption": {
+    "value": "Detail"
+  },
+  "RequireUnits": {
+    "value": false
+  },
+  "RevaluationRateType": {},
+  "Secured": {
+    "value": false
+  },
+  "TaxCategory": {},
+  "Type": {
+    "value": "Asset"
+  },
+  "UseDefaultSubaccount": {
+    "value": false
+  },
+  "custom": {}
+}

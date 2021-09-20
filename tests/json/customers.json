@@ -1,0 +1,776 @@
+[
+  {
+    "id": "579fb525-0f96-e411-b335-e006e6dac1d7",
+    "rowNumber": 1,
+    "note": {
+      "value": ""
+    },
+    "AccountRef": {},
+    "ApplyOverdueCharges": {
+      "value": false
+    },
+    "AutoApplyPayments": {
+      "value": true
+    },
+    "BillingAddressOverride": {
+      "value": true
+    },
+    "BillingContactOverride": {
+      "value": false
+    },
+    "CreatedDateTime": {
+      "value": "2014-10-25T00:31:17.56+00:00"
+    },
+    "CurrencyID": {
+      "value": "AUD"
+    },
+    "CurrencyRateType": {
+      "value": "SPOT"
+    },
+    "CustomerClass": {
+      "value": "DEFAULT"
+    },
+    "CustomerID": {
+      "value": "ABARTENDE"
+    },
+    "CustomerName": {
+      "value": "BA Industries"
+    },
+    "EnableCurrencyOverride": {
+      "value": true
+    },
+    "EnableRateOverride": {
+      "value": true
+    },
+    "EnableWriteOffs": {
+      "value": true
+    },
+    "FOBPoint": {},
+    "LastModifiedDateTime": {
+      "value": "2021-02-08T15:46:23.611591+00:00"
+    },
+    "LeadTimedays": {},
+    "LocationName": {
+      "value": "Primary Location"
+    },
+    "MainContact": {
+      "id": "5ed14edc-4fed-42c1-969e-5aa42889d8b0",
+      "rowNumber": 1,
+      "note": null,
+      "Attention": {},
+      "CompanyName": {
+        "value": "BA Industries"
+      },
+      "ContactID": {
+        "value": 3153
+      },
+      "DisplayName": {
+        "value": "BA Industries"
+      },
+      "Email": {
+        "value": "ba@industries.com.au"
+      },
+      "Fax": {},
+      "FirstName": {},
+      "JobTitle": {},
+      "LastName": {},
+      "MiddleName": {},
+      "Phone1": {
+        "value": "+61 (2) 3849 9201"
+      },
+      "Phone1Type": {
+        "value": "Business 1"
+      },
+      "Phone2": {},
+      "Phone2Type": {
+        "value": "Business 2"
+      },
+      "Title": {},
+      "WebSite": {},
+      "custom": {}
+    },
+    "MultiCurrencyStatements": {
+      "value": false
+    },
+    "OrderPriority": {
+      "value": 0
+    },
+    "ParentRecord": {},
+    "PriceClassID": {
+      "value": "A"
+    },
+    "PrintDunningLetters": {
+      "value": false
+    },
+    "PrintInvoices": {
+      "value": false
+    },
+    "PrintStatements": {
+      "value": true
+    },
+    "ResidentialDelivery": {
+      "value": false
+    },
+    "SaturdayDelivery": {
+      "value": false
+    },
+    "SendDunningLettersbyEmail": {
+      "value": true
+    },
+    "SendInvoicesbyEmail": {
+      "value": true
+    },
+    "SendStatementsbyEmail": {
+      "value": false
+    },
+    "ShippingAddressOverride": {},
+    "ShippingContactOverride": {},
+    "ShippingRule": {
+      "value": "Back Order Allowed"
+    },
+    "ShippingTerms": {},
+    "ShippingZoneID": {},
+    "ShipVia": {
+      "value": "LOCAL"
+    },
+    "StatementCycleID": {
+      "value": "EOTM"
+    },
+    "StatementType": {
+      "value": "Open Item"
+    },
+    "Status": {
+      "value": "Active"
+    },
+    "TaxRegistrationID": {},
+    "TaxZone": {
+      "value": "DOMESTIC"
+    },
+    "Terms": {
+      "value": "30THMONTH"
+    },
+    "WarehouseID": {},
+    "WriteOffLimit": {
+      "value": 5.0000
+    },
+    "custom": {}
+  },
+  {
+    "id": "7aa0b525-0f96-e411-b335-e006e6dac1d7",
+    "rowNumber": 2,
+    "note": {
+      "value": ""
+    },
+    "AccountRef": {},
+    "ApplyOverdueCharges": {
+      "value": false
+    },
+    "AutoApplyPayments": {
+      "value": true
+    },
+    "BillingAddressOverride": {
+      "value": false
+    },
+    "BillingContactOverride": {
+      "value": false
+    },
+    "CreatedDateTime": {
+      "value": "2015-05-05T02:34:39.74+00:00"
+    },
+    "CurrencyID": {
+      "value": "AUD"
+    },
+    "CurrencyRateType": {
+      "value": "SPOT"
+    },
+    "CustomerClass": {
+      "value": "DEFAULT"
+    },
+    "CustomerID": {
+      "value": "ABCSTUDIOS"
+    },
+    "CustomerName": {
+      "value": "ABC Studios Inc."
+    },
+    "EnableCurrencyOverride": {
+      "value": true
+    },
+    "EnableRateOverride": {
+      "value": true
+    },
+    "EnableWriteOffs": {
+      "value": true
+    },
+    "FOBPoint": {},
+    "LastModifiedDateTime": {
+      "value": "2018-07-31T15:31:56.482993+00:00"
+    },
+    "LeadTimedays": {},
+    "LocationName": {
+      "value": "Main Location"
+    },
+    "MainContact": {
+      "id": "7c9d84a8-535f-403e-9714-8640e6d6b563",
+      "rowNumber": 1,
+      "note": null,
+      "Attention": {},
+      "CompanyName": {
+        "value": "ABC Studios Inc."
+      },
+      "ContactID": {
+        "value": 3250
+      },
+      "DisplayName": {
+        "value": "ABC Studios Inc."
+      },
+      "Email": {
+        "value": "info@abcstudios.com.au"
+      },
+      "Fax": {},
+      "FirstName": {},
+      "JobTitle": {},
+      "LastName": {},
+      "MiddleName": {},
+      "Phone1": {
+        "value": "+64 (2) 7748 6374"
+      },
+      "Phone1Type": {
+        "value": "Business 1"
+      },
+      "Phone2": {},
+      "Phone2Type": {
+        "value": "Business 2"
+      },
+      "Title": {},
+      "WebSite": {
+        "value": "www.abcstudios.con"
+      },
+      "custom": {}
+    },
+    "MultiCurrencyStatements": {
+      "value": false
+    },
+    "OrderPriority": {
+      "value": 0
+    },
+    "ParentRecord": {},
+    "PriceClassID": {},
+    "PrintDunningLetters": {
+      "value": false
+    },
+    "PrintInvoices": {
+      "value": false
+    },
+    "PrintStatements": {
+      "value": true
+    },
+    "ResidentialDelivery": {
+      "value": false
+    },
+    "SaturdayDelivery": {
+      "value": false
+    },
+    "SendDunningLettersbyEmail": {
+      "value": true
+    },
+    "SendInvoicesbyEmail": {
+      "value": true
+    },
+    "SendStatementsbyEmail": {
+      "value": false
+    },
+    "ShippingAddressOverride": {},
+    "ShippingContactOverride": {},
+    "ShippingRule": {
+      "value": "Back Order Allowed"
+    },
+    "ShippingTerms": {},
+    "ShippingZoneID": {},
+    "ShipVia": {
+      "value": "LOCAL"
+    },
+    "StatementCycleID": {
+      "value": "EOTM"
+    },
+    "StatementType": {
+      "value": "Open Item"
+    },
+    "Status": {
+      "value": "Active"
+    },
+    "TaxRegistrationID": {},
+    "TaxZone": {
+      "value": "DOMESTIC"
+    },
+    "Terms": {
+      "value": "30THMONTH"
+    },
+    "WarehouseID": {},
+    "WriteOffLimit": {
+      "value": 5.0000
+    },
+    "custom": {}
+  },
+  {
+    "id": "5a9fb525-0f96-e411-b335-e006e6dac1d7",
+    "rowNumber": 3,
+    "note": {
+      "value": ""
+    },
+    "AccountRef": {},
+    "ApplyOverdueCharges": {
+      "value": false
+    },
+    "AutoApplyPayments": {
+      "value": true
+    },
+    "BillingAddressOverride": {
+      "value": false
+    },
+    "BillingContactOverride": {
+      "value": false
+    },
+    "CreatedDateTime": {
+      "value": "2014-10-25T00:31:17.827+00:00"
+    },
+    "CurrencyID": {
+      "value": "AUD"
+    },
+    "CurrencyRateType": {
+      "value": "SPOT"
+    },
+    "CustomerClass": {
+      "value": "DEFAULT"
+    },
+    "CustomerID": {
+      "value": "ACTIVESTAF"
+    },
+    "CustomerName": {
+      "value": "Active Staffing Service"
+    },
+    "EnableCurrencyOverride": {
+      "value": true
+    },
+    "EnableRateOverride": {
+      "value": true
+    },
+    "EnableWriteOffs": {
+      "value": true
+    },
+    "FOBPoint": {},
+    "LastModifiedDateTime": {
+      "value": "2018-07-31T15:32:07.712776+00:00"
+    },
+    "LeadTimedays": {},
+    "LocationName": {
+      "value": "Primary Location"
+    },
+    "MainContact": {
+      "id": "8b63201c-c1c6-4878-adae-1c2c5d441ac4",
+      "rowNumber": 1,
+      "note": null,
+      "Attention": {},
+      "CompanyName": {
+        "value": "Active Staffing Service"
+      },
+      "ContactID": {
+        "value": 3154
+      },
+      "DisplayName": {
+        "value": "Active Staffing Service"
+      },
+      "Email": {
+        "value": "info@active-staffing.com.au"
+      },
+      "Fax": {},
+      "FirstName": {},
+      "JobTitle": {},
+      "LastName": {},
+      "MiddleName": {},
+      "Phone1": {
+        "value": "+61 (2) 6784 8399"
+      },
+      "Phone1Type": {
+        "value": "Business 1"
+      },
+      "Phone2": {},
+      "Phone2Type": {
+        "value": "Business 2"
+      },
+      "Title": {},
+      "WebSite": {},
+      "custom": {}
+    },
+    "MultiCurrencyStatements": {
+      "value": false
+    },
+    "OrderPriority": {
+      "value": 0
+    },
+    "ParentRecord": {},
+    "PriceClassID": {},
+    "PrintDunningLetters": {
+      "value": false
+    },
+    "PrintInvoices": {
+      "value": false
+    },
+    "PrintStatements": {
+      "value": true
+    },
+    "ResidentialDelivery": {
+      "value": false
+    },
+    "SaturdayDelivery": {
+      "value": false
+    },
+    "SendDunningLettersbyEmail": {
+      "value": true
+    },
+    "SendInvoicesbyEmail": {
+      "value": true
+    },
+    "SendStatementsbyEmail": {
+      "value": false
+    },
+    "ShippingAddressOverride": {},
+    "ShippingContactOverride": {},
+    "ShippingRule": {
+      "value": "Back Order Allowed"
+    },
+    "ShippingTerms": {},
+    "ShippingZoneID": {},
+    "ShipVia": {
+      "value": "LOCAL"
+    },
+    "StatementCycleID": {
+      "value": "EOTM"
+    },
+    "StatementType": {
+      "value": "Open Item"
+    },
+    "Status": {
+      "value": "Active"
+    },
+    "TaxRegistrationID": {},
+    "TaxZone": {
+      "value": "DOMESTIC"
+    },
+    "Terms": {
+      "value": "30THMONTH"
+    },
+    "WarehouseID": {},
+    "WriteOffLimit": {
+      "value": 5.0000
+    },
+    "custom": {}
+  },
+  {
+    "id": "5d9fb525-0f96-e411-b335-e006e6dac1d7",
+    "rowNumber": 4,
+    "note": {
+      "value": "Test notes\n"
+    },
+    "AccountRef": {},
+    "ApplyOverdueCharges": {
+      "value": false
+    },
+    "AutoApplyPayments": {
+      "value": true
+    },
+    "BillingAddressOverride": {
+      "value": false
+    },
+    "BillingContactOverride": {
+      "value": false
+    },
+    "CreatedDateTime": {
+      "value": "2014-10-25T00:31:18.013+00:00"
+    },
+    "CurrencyID": {
+      "value": "AUD"
+    },
+    "CurrencyRateType": {
+      "value": "SPOT"
+    },
+    "CustomerClass": {
+      "value": "DEFAULT"
+    },
+    "CustomerID": {
+      "value": "ALPHABETLD"
+    },
+    "CustomerName": {
+      "value": "Alphabetland School Center"
+    },
+    "EnableCurrencyOverride": {
+      "value": true
+    },
+    "EnableRateOverride": {
+      "value": true
+    },
+    "EnableWriteOffs": {
+      "value": true
+    },
+    "FOBPoint": {},
+    "LastModifiedDateTime": {
+      "value": "2021-01-08T17:16:51.328714+00:00"
+    },
+    "LeadTimedays": {},
+    "LocationName": {
+      "value": "Primary Location"
+    },
+    "MainContact": {
+      "id": "cd60dedb-b2dd-4c75-9556-d2a9db28fb4d",
+      "rowNumber": 1,
+      "note": null,
+      "Attention": {},
+      "CompanyName": {
+        "value": "Alphabetland School Center"
+      },
+      "ContactID": {
+        "value": 3155
+      },
+      "DisplayName": {
+        "value": "Alphabetland School Center"
+      },
+      "Email": {
+        "value": "Alphabet@mail.com.au"
+      },
+      "Fax": {},
+      "FirstName": {},
+      "JobTitle": {},
+      "LastName": {},
+      "MiddleName": {},
+      "Phone1": {
+        "value": "+61 (2) 5463 8392"
+      },
+      "Phone1Type": {
+        "value": "Business 1"
+      },
+      "Phone2": {},
+      "Phone2Type": {
+        "value": "Business 2"
+      },
+      "Title": {},
+      "WebSite": {},
+      "custom": {}
+    },
+    "MultiCurrencyStatements": {
+      "value": false
+    },
+    "OrderPriority": {
+      "value": 0
+    },
+    "ParentRecord": {},
+    "PriceClassID": {
+      "value": "A"
+    },
+    "PrintDunningLetters": {
+      "value": false
+    },
+    "PrintInvoices": {
+      "value": false
+    },
+    "PrintStatements": {
+      "value": true
+    },
+    "ResidentialDelivery": {
+      "value": false
+    },
+    "SaturdayDelivery": {
+      "value": false
+    },
+    "SendDunningLettersbyEmail": {
+      "value": true
+    },
+    "SendInvoicesbyEmail": {
+      "value": true
+    },
+    "SendStatementsbyEmail": {
+      "value": false
+    },
+    "ShippingAddressOverride": {},
+    "ShippingContactOverride": {},
+    "ShippingRule": {
+      "value": "Back Order Allowed"
+    },
+    "ShippingTerms": {},
+    "ShippingZoneID": {},
+    "ShipVia": {
+      "value": "LOCAL"
+    },
+    "StatementCycleID": {
+      "value": "EOTM"
+    },
+    "StatementType": {
+      "value": "Open Item"
+    },
+    "Status": {
+      "value": "Active"
+    },
+    "TaxRegistrationID": {},
+    "TaxZone": {
+      "value": "DOMESTIC"
+    },
+    "Terms": {
+      "value": "30THMONTH"
+    },
+    "WarehouseID": {},
+    "WriteOffLimit": {
+      "value": 5.0000
+    },
+    "custom": {}
+  },
+  {
+    "id": "62a0b525-0f96-e411-b335-e006e6dac1d7",
+    "rowNumber": 5,
+    "note": {
+      "value": ""
+    },
+    "AccountRef": {},
+    "ApplyOverdueCharges": {
+      "value": false
+    },
+    "AutoApplyPayments": {
+      "value": true
+    },
+    "BillingAddressOverride": {
+      "value": false
+    },
+    "BillingContactOverride": {
+      "value": false
+    },
+    "CreatedDateTime": {
+      "value": "2014-10-25T00:44:53.793+00:00"
+    },
+    "CurrencyID": {
+      "value": "USD"
+    },
+    "CurrencyRateType": {
+      "value": "SPOT"
+    },
+    "CustomerClass": {
+      "value": "USCUST"
+    },
+    "CustomerID": {
+      "value": "AMROBANK"
+    },
+    "CustomerName": {
+      "value": "AMRO Bank N.V."
+    },
+    "EnableCurrencyOverride": {
+      "value": true
+    },
+    "EnableRateOverride": {
+      "value": true
+    },
+    "EnableWriteOffs": {
+      "value": true
+    },
+    "FOBPoint": {},
+    "LastModifiedDateTime": {
+      "value": "2018-07-31T15:11:32.168474+00:00"
+    },
+    "LeadTimedays": {},
+    "LocationName": {
+      "value": "Primary Location"
+    },
+    "MainContact": {
+      "id": "18a78b7b-de2d-4748-abc0-698c5cfda6b0",
+      "rowNumber": 1,
+      "note": null,
+      "Attention": {},
+      "CompanyName": {
+        "value": "AMRO Bank N.V."
+      },
+      "ContactID": {
+        "value": 3242
+      },
+      "DisplayName": {
+        "value": "AMRO Bank N.V."
+      },
+      "Email": {
+        "value": "info@amrobank.com"
+      },
+      "Fax": {},
+      "FirstName": {},
+      "JobTitle": {},
+      "LastName": {},
+      "MiddleName": {},
+      "Phone1": {
+        "value": "+1 (773) 456 0938"
+      },
+      "Phone1Type": {
+        "value": "Business 1"
+      },
+      "Phone2": {},
+      "Phone2Type": {
+        "value": "Business 2"
+      },
+      "Title": {},
+      "WebSite": {},
+      "custom": {}
+    },
+    "MultiCurrencyStatements": {
+      "value": false
+    },
+    "OrderPriority": {
+      "value": 0
+    },
+    "ParentRecord": {},
+    "PriceClassID": {},
+    "PrintDunningLetters": {
+      "value": false
+    },
+    "PrintInvoices": {
+      "value": false
+    },
+    "PrintStatements": {
+      "value": true
+    },
+    "ResidentialDelivery": {
+      "value": false
+    },
+    "SaturdayDelivery": {
+      "value": false
+    },
+    "SendDunningLettersbyEmail": {
+      "value": true
+    },
+    "SendInvoicesbyEmail": {
+      "value": true
+    },
+    "SendStatementsbyEmail": {
+      "value": false
+    },
+    "ShippingAddressOverride": {},
+    "ShippingContactOverride": {},
+    "ShippingRule": {
+      "value": "Back Order Allowed"
+    },
+    "ShippingTerms": {},
+    "ShippingZoneID": {},
+    "ShipVia": {},
+    "StatementCycleID": {
+      "value": "EOTM"
+    },
+    "StatementType": {
+      "value": "Open Item"
+    },
+    "Status": {
+      "value": "Active"
+    },
+    "TaxRegistrationID": {},
+    "TaxZone": {
+      "value": "OVERSEAS"
+    },
+    "Terms": {
+      "value": "30THMONTH"
+    },
+    "WarehouseID": {},
+    "WriteOffLimit": {
+      "value": 5.0000
+    },
+    "custom": {}
+  }
+]
