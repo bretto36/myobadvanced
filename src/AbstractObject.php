@@ -7,15 +7,39 @@ use PHPUnit\Runner\Exception;
 
 abstract class AbstractObject
 {
-    public string $entity = ''; // This should be overridden per object
     public string $endpoint = 'Default';
     public string $endpointVersion = '20.200.001';
 
+    // The underlying object from the API
     public object $object;
+    // A hash that is stored to determine if the entity has changed when save is called
     public string $hash;
+    // If true this means the object already has an ID associated with it and any save will attempt to do a PUT request
     public bool $saved = false;
 
-    protected array $dates = [];
+    public array $expands = [];
+
+    protected array $dates = [
+        'CreatedDateTime',
+        'LastModifiedDateTime',
+    ];
+
+    public function __construct($object = null)
+    {
+        $this->object = new \stdClass();
+
+        if ($object) {
+            $this->loadObject(is_object($object) ? $object : json_decode($object, false));
+            $this->saved = true;
+        }
+
+        $this->hash = $this->getHash();
+    }
+
+    public function loadObject($object)
+    {
+        $this->object = $object;
+    }
 
     public function getId()
     {
@@ -34,22 +58,7 @@ abstract class AbstractObject
 
     public function getEntity(): string
     {
-        return $this->entity;
-    }
-
-    public function __construct($object = null)
-    {
-        if (is_object($object)) {
-            $this->object = $object;
-            $this->saved  = true;
-        } elseif ($object) {
-            $this->object = json_decode($object, false);
-            $this->saved  = true;
-        } else {
-            $this->object = new \stdClass();
-        }
-
-        $this->hash = $this->getHash();
+        return $this->entity ?? class_basename($this);
     }
 
     public function getHash(): string

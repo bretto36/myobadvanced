@@ -65,11 +65,5 @@ use Carbon\Carbon;
  */
 class Account extends AbstractObject
 {
-    // TODO: Convert to carbons
-    public string $entity = 'Account';
 
-    protected array $dates = [
-        'CreatedDateTime',
-        'LastModifiedDateTime',
-    ];
 }
