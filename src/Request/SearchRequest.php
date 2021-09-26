@@ -4,9 +4,11 @@ namespace MyobAdvanced\Request;
 
 use Illuminate\Support\Collection;
 
-class SearchRequest extends GetRequest implements \IteratorAggregate, \ArrayAccess
+class SearchRequest extends Request implements \IteratorAggregate, \ArrayAccess
 {
     protected array $filters = [];
+    protected array $selects = [];
+    protected array $expands = [];
     protected int $page = 1;
     protected int $pageSize = 1000;
     protected Collection $results;
@@ -21,6 +23,61 @@ class SearchRequest extends GetRequest implements \IteratorAggregate, \ArrayAcce
         $this->results = collect();
 
         parent::__construct($className, $myobAdvanced);
+    }
+
+    public function getData()
+    {
+        return $this->getQuery();
+    }
+
+    /**
+     * @param $expands
+     * @return $this
+     */
+    public function setExpands($expands): Request
+    {
+        $this->expands = $expands;
+
+        return $this;
+    }
+
+    /**
+     * @param $expand
+     * @return $this
+     */
+    public function addExpand($expand): Request
+    {
+        if (!is_array($expand)) {
+            $expand = [$expand];
+        }
+
+        foreach ($expand as $value) {
+            $this->expands[$value] = $value;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param $selects
+     * @return $this
+     */
+    public function setSelects($selects): Request
+    {
+        $this->selects = $selects;
+
+        return $this;
+    }
+
+    /**
+     * @param $select
+     * @return $this
+     */
+    public function addSelect($select): Request
+    {
+        $this->selects[$select] = $select;
+
+        return $this;
     }
 
     /**
@@ -84,6 +141,16 @@ class SearchRequest extends GetRequest implements \IteratorAggregate, \ArrayAcce
     public function getQuery(): array
     {
         $values = parent::getQuery();
+
+        // Selects
+        if (!empty($this->selects)) {
+            $values['$select'] = implode(',', $this->selects);
+        }
+
+        // Expands
+        if (!empty($this->expands)) {
+            $values['$expand'] = implode(',', $this->expands);
+        }
 
         // Filter
         if (!empty($this->filters)) {

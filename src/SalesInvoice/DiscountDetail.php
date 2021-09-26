@@ -1,8 +1,8 @@
 <?php
 
-namespace MyobAdvanced;
+namespace MyobAdvanced\SalesInvoice;
 
-use Carbon\Carbon;
+use MyobAdvanced\AbstractObject;
 
 /**
  * @method string getDescription()
@@ -36,6 +36,6 @@ use Carbon\Carbon;
  * @method string getType()
  * @method self setType(string $value)
  */
-class SalesInvoiceDiscountDetail extends AbstractObject
+class DiscountDetail extends AbstractObject
 {
 }

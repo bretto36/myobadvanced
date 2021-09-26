@@ -1,0 +1,2006 @@
+[
+    {
+        "id": "ae54df65-378e-e511-80ee-029eaf28db22",
+        "rowNumber": 1,
+        "note": {
+            "value": ""
+        },
+        "Amount": {
+            "value": 5427.9600
+        },
+        "Balance": {
+            "value": 0.0000
+        },
+        "BillingSettings": {
+            "id": "2a230cfa-9820-4c99-ba9c-8ea50ec38a0c",
+            "rowNumber": 1,
+            "note": null,
+            "BillToAddressOverride": {
+                "value": false
+            },
+            "BillToContactOverride": {
+                "value": false
+            },
+            "custom": {}
+        },
+        "CreditHold": {
+            "value": false
+        },
+        "Currency": {
+            "value": "NZD"
+        },
+        "CustomerID": {
+            "value": "ELITEANSW"
+        },
+        "CustomerOrder": {},
+        "Date": {
+            "value": "2013-07-07T00:00:00+00:00"
+        },
+        "Description": {},
+        "Details": [
+            {
+                "id": "b154df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 1,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 3522.7500
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "X053XUS120"
+                },
+                "LineNbr": {
+                    "value": 1
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 1
+                },
+                "OrderNbr": {
+                    "value": "000486"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 5.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000001"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "XRE Desktop"
+                },
+                "UnitPrice": {
+                    "value": 704.550000
+                },
+                "UOM": {
+                    "value": "PC"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            },
+            {
+                "id": "b254df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 2,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 1284.3500
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "P000MSS019"
+                },
+                "LineNbr": {
+                    "value": 2
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 3
+                },
+                "OrderNbr": {
+                    "value": "000486"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 5.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000001"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "Samsunng monitor 21.5''"
+                },
+                "UnitPrice": {
+                    "value": 256.870000
+                },
+                "UOM": {
+                    "value": "PC"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            },
+            {
+                "id": "b354df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 3,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 17.3000
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "SO00000103"
+                },
+                "LineNbr": {
+                    "value": 3
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 4
+                },
+                "OrderNbr": {
+                    "value": "000486"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 5.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000001"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "HDMI Male to DVI-D Male"
+                },
+                "UnitPrice": {
+                    "value": 3.460000
+                },
+                "UOM": {
+                    "value": "METRE"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            },
+            {
+                "id": "b454df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 4,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 110.1000
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "SE00001"
+                },
+                "LineNbr": {
+                    "value": 4
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 5
+                },
+                "OrderNbr": {
+                    "value": "000486"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 5.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000001"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "PCI Express USB 3.0 2 Port Card"
+                },
+                "UnitPrice": {
+                    "value": 22.020000
+                },
+                "UOM": {
+                    "value": "UNIT"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            }
+        ],
+        "DetailTotal": {
+            "value": 4934.5000
+        },
+        "DiscountDetails": [],
+        "DiscountTotal": {
+            "value": 0.0000
+        },
+        "DueDate": {
+            "value": "2013-08-30T00:00:00+00:00"
+        },
+        "FinancialDetails": {
+            "id": "50b25d90-2c8f-4f35-ae2f-9622ae8d3281",
+            "rowNumber": 1,
+            "note": null,
+            "BatchNbr": {
+                "value": "000212"
+            },
+            "CustomerTaxZone": {
+                "value": "DOMESTIC"
+            },
+            "custom": {}
+        },
+        "FreightDetails": [
+            {
+                "id": "b554df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 1,
+                "note": {
+                    "value": ""
+                },
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "FreightAmount": {
+                    "value": 0.000000
+                },
+                "FreightCost": {
+                    "value": 0.0000
+                },
+                "LineTotal": {
+                    "value": 4799.310000
+                },
+                "PremiumFreightAmount": {
+                    "value": 0.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000001"
+                },
+                "ShipmentType": {
+                    "value": "Shipment"
+                },
+                "TotalFreightAmount": {
+                    "value": 0.000000
+                },
+                "Volume": {
+                    "value": 0.700000
+                },
+                "Weight": {
+                    "value": 63.500000
+                },
+                "custom": {}
+            }
+        ],
+        "FreightPrice": {
+            "value": 0.0000
+        },
+        "Hold": {
+            "value": false
+        },
+        "PaymentTotal": {
+            "value": 5427.9600
+        },
+        "Project": {
+            "value": "X"
+        },
+        "ReferenceNbr": {
+            "value": "000001"
+        },
+        "Status": {
+            "value": "Closed"
+        },
+        "TaxTotal": {
+            "value": 493.4600
+        },
+        "Type": {
+            "value": "Invoice"
+        },
+        "VATExemptTotal": {
+            "value": 0.0000
+        },
+        "VATTaxableTotal": {
+            "value": 4934.5000
+        },
+        "custom": {}
+    },
+    {
+        "id": "b654df65-378e-e511-80ee-029eaf28db22",
+        "rowNumber": 2,
+        "note": {
+            "value": ""
+        },
+        "Amount": {
+            "value": 3981.9700
+        },
+        "Balance": {
+            "value": 0.0000
+        },
+        "BillingSettings": {
+            "id": "5bc6cf5e-f5d1-4db0-9d30-2ebe8a7401d0",
+            "rowNumber": 1,
+            "note": null,
+            "BillToAddressOverride": {
+                "value": false
+            },
+            "BillToContactOverride": {
+                "value": false
+            },
+            "custom": {}
+        },
+        "CreditHold": {
+            "value": false
+        },
+        "Currency": {
+            "value": "NZD"
+        },
+        "CustomerID": {
+            "value": "FDICOCCIA"
+        },
+        "CustomerOrder": {},
+        "Date": {
+            "value": "2013-07-07T00:00:00+00:00"
+        },
+        "Description": {},
+        "Details": [
+            {
+                "id": "b954df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 1,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 3346.6200
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "D0017SNUM1"
+                },
+                "LineNbr": {
+                    "value": 1
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 1
+                },
+                "OrderNbr": {
+                    "value": "000487"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 2.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000002"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "D0017SNUM1"
+                },
+                "UnitPrice": {
+                    "value": 1673.310000
+                },
+                "UOM": {
+                    "value": "PC"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            },
+            {
+                "id": "ba54df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 2,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 234.8500
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "SO00000201"
+                },
+                "LineNbr": {
+                    "value": 2
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 3
+                },
+                "OrderNbr": {
+                    "value": "000487"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 1.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000002"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "8 Port Gigabyte Switch"
+                },
+                "UnitPrice": {
+                    "value": 234.850000
+                },
+                "UOM": {
+                    "value": "UNIT"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            },
+            {
+                "id": "bb54df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 3,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 38.5000
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "NE00003"
+                },
+                "LineNbr": {
+                    "value": 3
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 4
+                },
+                "OrderNbr": {
+                    "value": "000487"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 50.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000002"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "CAT6 UTP Crossover Cables"
+                },
+                "UnitPrice": {
+                    "value": 0.770000
+                },
+                "UOM": {
+                    "value": "METRE"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            }
+        ],
+        "DetailTotal": {
+            "value": 3619.9700
+        },
+        "DiscountDetails": [],
+        "DiscountTotal": {
+            "value": 0.0000
+        },
+        "DueDate": {
+            "value": "2013-08-30T00:00:00+00:00"
+        },
+        "FinancialDetails": {
+            "id": "c5204878-e9dd-46de-992e-0882f63e149e",
+            "rowNumber": 1,
+            "note": null,
+            "BatchNbr": {
+                "value": "000212"
+            },
+            "CustomerTaxZone": {
+                "value": "DOMESTIC"
+            },
+            "custom": {}
+        },
+        "FreightDetails": [
+            {
+                "id": "bc54df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 1,
+                "note": {
+                    "value": ""
+                },
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "FreightAmount": {
+                    "value": 0.000000
+                },
+                "FreightCost": {
+                    "value": 0.0000
+                },
+                "LineTotal": {
+                    "value": 3520.540000
+                },
+                "PremiumFreightAmount": {
+                    "value": 0.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000002"
+                },
+                "ShipmentType": {
+                    "value": "Shipment"
+                },
+                "TotalFreightAmount": {
+                    "value": 0.000000
+                },
+                "Volume": {
+                    "value": 0.310000
+                },
+                "Weight": {
+                    "value": 22.050000
+                },
+                "custom": {}
+            }
+        ],
+        "FreightPrice": {
+            "value": 0.0000
+        },
+        "Hold": {
+            "value": false
+        },
+        "PaymentTotal": {
+            "value": 3981.9700
+        },
+        "Project": {
+            "value": "X"
+        },
+        "ReferenceNbr": {
+            "value": "000002"
+        },
+        "Status": {
+            "value": "Closed"
+        },
+        "TaxTotal": {
+            "value": 362.0000
+        },
+        "Type": {
+            "value": "Invoice"
+        },
+        "VATExemptTotal": {
+            "value": 0.0000
+        },
+        "VATTaxableTotal": {
+            "value": 3619.9700
+        },
+        "custom": {}
+    },
+    {
+        "id": "bd54df65-378e-e511-80ee-029eaf28db22",
+        "rowNumber": 3,
+        "note": {
+            "value": ""
+        },
+        "Amount": {
+            "value": 7209.9500
+        },
+        "Balance": {
+            "value": 0.0000
+        },
+        "BillingSettings": {
+            "id": "d7cb0371-8a4d-4dd9-8aae-2d75ab2f49d7",
+            "rowNumber": 1,
+            "note": null,
+            "BillToAddressOverride": {
+                "value": false
+            },
+            "BillToContactOverride": {
+                "value": false
+            },
+            "custom": {}
+        },
+        "CreditHold": {
+            "value": false
+        },
+        "Currency": {
+            "value": "AUD"
+        },
+        "CustomerID": {
+            "value": "HUNTINGTON"
+        },
+        "CustomerOrder": {},
+        "Date": {
+            "value": "2013-07-07T00:00:00+00:00"
+        },
+        "Description": {},
+        "Details": [
+            {
+                "id": "c054df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 1,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 6240.0000
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "X053XUS120"
+                },
+                "LineNbr": {
+                    "value": 1
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 1
+                },
+                "OrderNbr": {
+                    "value": "000529"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 10.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000003"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "XRE Desktop"
+                },
+                "UnitPrice": {
+                    "value": 624.000000
+                },
+                "UOM": {
+                    "value": "PC"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            },
+            {
+                "id": "c154df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 2,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 227.5000
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "SO00000202"
+                },
+                "LineNbr": {
+                    "value": 2
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 3
+                },
+                "OrderNbr": {
+                    "value": "000529"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 1.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000003"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "12 Port Gigabyte Switch"
+                },
+                "UnitPrice": {
+                    "value": 227.500000
+                },
+                "UOM": {
+                    "value": "UNIT"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            },
+            {
+                "id": "c254df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 3,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 87.0000
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "NE00006V"
+                },
+                "LineNbr": {
+                    "value": 3
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 4
+                },
+                "OrderNbr": {
+                    "value": "000529"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 100.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000003"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "CAT6a STP Shielded Patch Leads"
+                },
+                "UnitPrice": {
+                    "value": 0.870000
+                },
+                "UOM": {
+                    "value": "METRE"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            }
+        ],
+        "DetailTotal": {
+            "value": 6554.5000
+        },
+        "DiscountDetails": [],
+        "DiscountTotal": {
+            "value": 0.0000
+        },
+        "DueDate": {
+            "value": "2013-08-30T00:00:00+00:00"
+        },
+        "FinancialDetails": {
+            "id": "59e87807-62b2-4a14-8ed5-1d5e45e5ed8f",
+            "rowNumber": 1,
+            "note": null,
+            "BatchNbr": {
+                "value": "000213"
+            },
+            "CustomerTaxZone": {
+                "value": "DOMESTIC"
+            },
+            "custom": {}
+        },
+        "FreightDetails": [
+            {
+                "id": "c354df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 1,
+                "note": {
+                    "value": ""
+                },
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "FreightAmount": {
+                    "value": 0.000000
+                },
+                "FreightCost": {
+                    "value": 0.0000
+                },
+                "LineTotal": {
+                    "value": 6554.500000
+                },
+                "PremiumFreightAmount": {
+                    "value": 0.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000003"
+                },
+                "ShipmentType": {
+                    "value": "Shipment"
+                },
+                "TotalFreightAmount": {
+                    "value": 0.000000
+                },
+                "Volume": {
+                    "value": 1.170000
+                },
+                "Weight": {
+                    "value": 93.700000
+                },
+                "custom": {}
+            }
+        ],
+        "FreightPrice": {
+            "value": 0.0000
+        },
+        "Hold": {
+            "value": false
+        },
+        "PaymentTotal": {
+            "value": 7209.9500
+        },
+        "Project": {
+            "value": "X"
+        },
+        "ReferenceNbr": {
+            "value": "000003"
+        },
+        "Status": {
+            "value": "Closed"
+        },
+        "TaxTotal": {
+            "value": 655.4500
+        },
+        "Type": {
+            "value": "Invoice"
+        },
+        "VATExemptTotal": {
+            "value": 0.0000
+        },
+        "VATTaxableTotal": {
+            "value": 6554.5000
+        },
+        "custom": {}
+    },
+    {
+        "id": "c454df65-378e-e511-80ee-029eaf28db22",
+        "rowNumber": 4,
+        "note": {
+            "value": ""
+        },
+        "Amount": {
+            "value": 5196.8900
+        },
+        "Balance": {
+            "value": 0.0000
+        },
+        "BillingSettings": {
+            "id": "4da11e1d-b792-4488-9879-07da7f27b9c7",
+            "rowNumber": 1,
+            "note": null,
+            "BillToAddressOverride": {
+                "value": false
+            },
+            "BillToContactOverride": {
+                "value": false
+            },
+            "custom": {}
+        },
+        "CreditHold": {
+            "value": false
+        },
+        "Currency": {
+            "value": "AUD"
+        },
+        "CustomerID": {
+            "value": "FDIAGRI"
+        },
+        "CustomerOrder": {},
+        "Date": {
+            "value": "2013-07-07T00:00:00+00:00"
+        },
+        "Description": {},
+        "Details": [
+            {
+                "id": "c754df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 1,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 701.2700
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "D000000033"
+                },
+                "LineNbr": {
+                    "value": 1
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 1
+                },
+                "OrderNbr": {
+                    "value": "000530"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 1.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000004"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "Optiflex F5300S"
+                },
+                "UnitPrice": {
+                    "value": 701.270000
+                },
+                "UOM": {
+                    "value": "PC"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            },
+            {
+                "id": "c854df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 2,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 1419.6000
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "P000MLG019"
+                },
+                "LineNbr": {
+                    "value": 2
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 3
+                },
+                "OrderNbr": {
+                    "value": "000530"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 4.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000004"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "LG monitor 27''"
+                },
+                "UnitPrice": {
+                    "value": 354.900000
+                },
+                "UOM": {
+                    "value": "PC"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            },
+            {
+                "id": "6c1d3e6c-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 3,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 1000.0000
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "JRCONSULT"
+                },
+                "LineNbr": {
+                    "value": 3
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 1
+                },
+                "OrderNbr": {
+                    "value": "000492"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 5.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000010"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "Junior Consultation"
+                },
+                "UnitPrice": {
+                    "value": 200.000000
+                },
+                "UOM": {
+                    "value": "HOUR"
+                },
+                "WarehouseID": {},
+                "custom": {}
+            },
+            {
+                "id": "6d1d3e6c-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 4,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 429.0000
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "LCS0001"
+                },
+                "LineNbr": {
+                    "value": 4
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 2
+                },
+                "OrderNbr": {
+                    "value": "000492"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 3.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000010"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "Windows 10NT OS"
+                },
+                "UnitPrice": {
+                    "value": 143.000000
+                },
+                "UOM": {
+                    "value": "PC"
+                },
+                "WarehouseID": {
+                    "value": "SYD"
+                },
+                "custom": {}
+            },
+            {
+                "id": "6f1d3e6c-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 5,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 1066.0000
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "SO151ST004"
+                },
+                "LineNbr": {
+                    "value": 5
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 1
+                },
+                "OrderNbr": {
+                    "value": "000538"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 1.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000010"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "100'' Projector Screen 16:9 Ratio"
+                },
+                "UnitPrice": {
+                    "value": 1066.000000
+                },
+                "UOM": {
+                    "value": "UNIT"
+                },
+                "WarehouseID": {
+                    "value": "SYD"
+                },
+                "custom": {}
+            },
+            {
+                "id": "701d3e6c-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 6,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 4.8900
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "SO152ST003"
+                },
+                "LineNbr": {
+                    "value": 6
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 3
+                },
+                "OrderNbr": {
+                    "value": "000538"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 3.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000010"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "USB 3.0 Micro B Male to Type A Female"
+                },
+                "UnitPrice": {
+                    "value": 1.630000
+                },
+                "UOM": {
+                    "value": "METRE"
+                },
+                "WarehouseID": {
+                    "value": "SYD"
+                },
+                "custom": {}
+            },
+            {
+                "id": "711d3e6c-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 7,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 103.6800
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "X000X00120"
+                },
+                "LineNbr": {
+                    "value": 7
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 5
+                },
+                "OrderNbr": {
+                    "value": "000538"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 1.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000010"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "X'tor HDD 4 TB"
+                },
+                "UnitPrice": {
+                    "value": 103.680000
+                },
+                "UOM": {
+                    "value": "UNIT"
+                },
+                "WarehouseID": {
+                    "value": "SYD"
+                },
+                "custom": {}
+            }
+        ],
+        "DetailTotal": {
+            "value": 4724.4400
+        },
+        "DiscountDetails": [],
+        "DiscountTotal": {
+            "value": 0.0000
+        },
+        "DueDate": {
+            "value": "2013-08-30T00:00:00+00:00"
+        },
+        "FinancialDetails": {
+            "id": "fb1b7475-ac22-47fe-baaa-601a01fb60e5",
+            "rowNumber": 1,
+            "note": null,
+            "BatchNbr": {
+                "value": "000213"
+            },
+            "CustomerTaxZone": {
+                "value": "DOMESTIC"
+            },
+            "custom": {}
+        },
+        "FreightDetails": [
+            {
+                "id": "6e1d3e6c-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 1,
+                "note": {
+                    "value": ""
+                },
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "FreightAmount": {
+                    "value": 0.000000
+                },
+                "FreightCost": {
+                    "value": 0.0000
+                },
+                "LineTotal": {
+                    "value": 1603.570000
+                },
+                "PremiumFreightAmount": {
+                    "value": 0.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000010"
+                },
+                "ShipmentType": {
+                    "value": "Shipment"
+                },
+                "TotalFreightAmount": {
+                    "value": 0.000000
+                },
+                "Volume": {
+                    "value": 0.000000
+                },
+                "Weight": {
+                    "value": 0.000000
+                },
+                "custom": {}
+            },
+            {
+                "id": "c954df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 2,
+                "note": {
+                    "value": ""
+                },
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "FreightAmount": {
+                    "value": 0.000000
+                },
+                "FreightCost": {
+                    "value": 0.0000
+                },
+                "LineTotal": {
+                    "value": 2120.870000
+                },
+                "PremiumFreightAmount": {
+                    "value": 0.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000004"
+                },
+                "ShipmentType": {
+                    "value": "Shipment"
+                },
+                "TotalFreightAmount": {
+                    "value": 0.000000
+                },
+                "Volume": {
+                    "value": 0.300000
+                },
+                "Weight": {
+                    "value": 30.530000
+                },
+                "custom": {}
+            }
+        ],
+        "FreightPrice": {
+            "value": 0.0000
+        },
+        "Hold": {
+            "value": false
+        },
+        "PaymentTotal": {
+            "value": 5196.8900
+        },
+        "Project": {
+            "value": "X"
+        },
+        "ReferenceNbr": {
+            "value": "000004"
+        },
+        "Status": {
+            "value": "Closed"
+        },
+        "TaxTotal": {
+            "value": 472.4500
+        },
+        "Type": {
+            "value": "Invoice"
+        },
+        "VATExemptTotal": {
+            "value": 0.0000
+        },
+        "VATTaxableTotal": {
+            "value": 4724.4400
+        },
+        "custom": {}
+    },
+    {
+        "id": "ca54df65-378e-e511-80ee-029eaf28db22",
+        "rowNumber": 5,
+        "note": {
+            "value": ""
+        },
+        "Amount": {
+            "value": 4043.9200
+        },
+        "Balance": {
+            "value": 0.0000
+        },
+        "BillingSettings": {
+            "id": "6812c452-2068-42d3-9987-75ffbd93e33c",
+            "rowNumber": 1,
+            "note": null,
+            "BillToAddressOverride": {
+                "value": false
+            },
+            "BillToContactOverride": {
+                "value": false
+            },
+            "custom": {}
+        },
+        "CreditHold": {
+            "value": false
+        },
+        "Currency": {
+            "value": "AUD"
+        },
+        "CustomerID": {
+            "value": "NYCARES"
+        },
+        "CustomerOrder": {},
+        "Date": {
+            "value": "2013-07-07T00:00:00+00:00"
+        },
+        "Description": {},
+        "Details": [
+            {
+                "id": "cd54df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 1,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 2496.0000
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "X053XUS120"
+                },
+                "LineNbr": {
+                    "value": 1
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 1
+                },
+                "OrderNbr": {
+                    "value": "000531"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 4.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000005"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "XRE Desktop"
+                },
+                "UnitPrice": {
+                    "value": 624.000000
+                },
+                "UOM": {
+                    "value": "PC"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            },
+            {
+                "id": "ce54df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 2,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 136.5000
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "SO00000303"
+                },
+                "LineNbr": {
+                    "value": 2
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 3
+                },
+                "OrderNbr": {
+                    "value": "000531"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 1.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000005"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "AC9000 Smart WiFi Router"
+                },
+                "UnitPrice": {
+                    "value": 136.500000
+                },
+                "UOM": {
+                    "value": "UNIT"
+                },
+                "WarehouseID": {
+                    "value": "MLB"
+                },
+                "custom": {}
+            },
+            {
+                "id": "721d3e6c-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 3,
+                "note": {
+                    "value": ""
+                },
+                "Amount": {
+                    "value": 1043.7900
+                },
+                "CalculateDiscountsOnImport": {},
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "DiscountAmount": {
+                    "value": 0.0000
+                },
+                "DiscountPercent": {
+                    "value": 0.000000
+                },
+                "InventoryID": {
+                    "value": "WHEELG27"
+                },
+                "LineNbr": {
+                    "value": 3
+                },
+                "ManualDiscount": {
+                    "value": true
+                },
+                "OrderLineNbr": {
+                    "value": 1
+                },
+                "OrderNbr": {
+                    "value": "000540"
+                },
+                "OrderType": {
+                    "value": "SO"
+                },
+                "Qty": {
+                    "value": 3.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000011"
+                },
+                "Subitem": {
+                    "value": "0"
+                },
+                "TaxCategory": {
+                    "value": "DEFAULT"
+                },
+                "TransactionDescr": {
+                    "value": "Racing Wheel G27"
+                },
+                "UnitPrice": {
+                    "value": 347.930000
+                },
+                "UOM": {
+                    "value": "UNIT"
+                },
+                "WarehouseID": {
+                    "value": "SYD"
+                },
+                "custom": {}
+            }
+        ],
+        "DetailTotal": {
+            "value": 3676.2900
+        },
+        "DiscountDetails": [],
+        "DiscountTotal": {
+            "value": 0.0000
+        },
+        "DueDate": {
+            "value": "2013-08-30T00:00:00+00:00"
+        },
+        "FinancialDetails": {
+            "id": "f00a09aa-56fd-4f83-be59-2de235daef6b",
+            "rowNumber": 1,
+            "note": null,
+            "BatchNbr": {
+                "value": "000213"
+            },
+            "CustomerTaxZone": {
+                "value": "DOMESTIC"
+            },
+            "custom": {}
+        },
+        "FreightDetails": [
+            {
+                "id": "cf54df65-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 1,
+                "note": {
+                    "value": ""
+                },
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "FreightAmount": {
+                    "value": 0.000000
+                },
+                "FreightCost": {
+                    "value": 0.0000
+                },
+                "LineTotal": {
+                    "value": 2632.500000
+                },
+                "PremiumFreightAmount": {
+                    "value": 0.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000005"
+                },
+                "ShipmentType": {
+                    "value": "Shipment"
+                },
+                "TotalFreightAmount": {
+                    "value": 0.000000
+                },
+                "Volume": {
+                    "value": 0.490000
+                },
+                "Weight": {
+                    "value": 37.650000
+                },
+                "custom": {}
+            },
+            {
+                "id": "731d3e6c-378e-e511-80ee-029eaf28db22",
+                "rowNumber": 2,
+                "note": {
+                    "value": ""
+                },
+                "Description": {
+                    "value": "Income - Sales"
+                },
+                "FreightAmount": {
+                    "value": 0.000000
+                },
+                "FreightCost": {
+                    "value": 0.0000
+                },
+                "LineTotal": {
+                    "value": 1043.790000
+                },
+                "PremiumFreightAmount": {
+                    "value": 0.000000
+                },
+                "ShipmentNbr": {
+                    "value": "000011"
+                },
+                "ShipmentType": {
+                    "value": "Shipment"
+                },
+                "TotalFreightAmount": {
+                    "value": 0.000000
+                },
+                "Volume": {
+                    "value": 0.000000
+                },
+                "Weight": {
+                    "value": 0.000000
+                },
+                "custom": {}
+            }
+        ],
+        "FreightPrice": {
+            "value": 0.0000
+        },
+        "Hold": {
+            "value": false
+        },
+        "PaymentTotal": {
+            "value": 4043.9200
+        },
+        "Project": {
+            "value": "X"
+        },
+        "ReferenceNbr": {
+            "value": "000005"
+        },
+        "Status": {
+            "value": "Closed"
+        },
+        "TaxTotal": {
+            "value": 367.6300
+        },
+        "Type": {
+            "value": "Invoice"
+        },
+        "VATExemptTotal": {
+            "value": 0.0000
+        },
+        "VATTaxableTotal": {
+            "value": 3676.2900
+        },
+        "custom": {}
+    }
+]

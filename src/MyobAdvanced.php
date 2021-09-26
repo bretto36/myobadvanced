@@ -49,33 +49,25 @@ class MyobAdvanced
 
     public function login()
     {
-        return (new LoginRequest($this))->send();
+        return (new LoginRequest('', $this))->send();
     }
 
     /**
      * @param $className
      * @param null $pageSize
      * @return SearchRequest
-     * @throws Exception\ApiException
      */
     public function search($className, $pageSize = null)
     {
-        $searchRequest = new SearchRequest($className, $this, $pageSize);
-
-        $searchRequest->send();
-
-        return $searchRequest;
+        return new SearchRequest($className, $this, $pageSize);
     }
 
     /**
      * @param $className
      * @return GetRequest
-     * @throws Exception\ApiException
      */
-    public function get($className)
+    public function get($className, $id)
     {
-        $getRequest = new GetRequest($className, $this);
-
-        return $getRequest->send();
+        return new GetRequest($className, $this, $id);
     }
 }

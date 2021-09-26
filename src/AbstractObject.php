@@ -39,6 +39,27 @@ abstract class AbstractObject
     public function loadObject($object)
     {
         $this->object = $object;
+
+        foreach ($this->expands as $key => $type) {
+            if (isset($this->object->$key)) {
+                if (is_array($type)) {
+                    $this->$key = collect();
+
+                    // Only set the value if it's an array
+                    if (!is_array($this->object->$key)) {
+                        continue;
+                    }
+
+                    $type = array_shift($type);
+
+                    foreach ($this->object->$key as $subObject) {
+                        $this->$key->push(new $type($subObject));
+                    }
+                } else {
+                    $this->$key = new $type($this->object->$key);
+                }
+            }
+        }
     }
 
     public function getId()
@@ -96,11 +117,23 @@ abstract class AbstractObject
 
     public function get($field, $default)
     {
+        if (isset($this->expands[$field])) {
+            return $this->$field ?? null;
+        }
+
+        // This is an expandable option therefore it needs to be a
         $value = $this->object->$field->value ?? $default;
 
         // Format to Carbon Date
         if (in_array($field, $this->dates)) {
-            $value = Carbon::createFromFormat('Y-m-d\TH:i:s.uP', $value);
+            // two types of date format
+            // Y-m-d\TH:i:s.uP or Y-m-d\TH:i:sP
+            $format = 'Y-m-d\TH:i:s.uP';
+            if (strlen($value) == 25) {
+                $format = 'Y-m-d\TH:i:sP';
+            }
+
+            $value = Carbon::createFromFormat($format, $value);
         }
 
         return $value;

@@ -3,6 +3,15 @@
 namespace MyobAdvanced;
 
 use Carbon\Carbon;
+use Illuminate\Support\Collection;
+use MyobAdvanced\SalesInvoice\ApplicationInvoice;
+use MyobAdvanced\SalesInvoice\ApplicationsCreditMemo;
+use MyobAdvanced\SalesInvoice\Commissions;
+use MyobAdvanced\SalesInvoice\Detail;
+use MyobAdvanced\SalesInvoice\DiscountDetail;
+use MyobAdvanced\SalesInvoice\FinancialDetail;
+use MyobAdvanced\SalesInvoice\FreightDetail;
+use MyobAdvanced\SalesInvoice\TaxDetail;
 
 /**
  * @method float getAmount()
@@ -47,18 +56,33 @@ use Carbon\Carbon;
  * @method self setVATExemptTotal(float $value)
  * @method float getVATTaxableTotal()
  * @method self setVATTaxableTotal(float $value)
+ *
+ * @method ApplicationsCreditMemo[]|Collection getApplicationsCreditMemo()
+ * @method ApplicationInvoice[]|Collection getApplicationsInvoice()
+ * @method BillingSettings getBillingSettings()
+ * @method Commissions[]|Collection getCommissions()
+ * @method Detail[]|Collection getDetails()
+ * @method DiscountDetail[]|Collection getDiscountDetails()
+ * @method FinancialDetail getFinancialDetails()
+ * @method FreightDetail[]|Collection getFreightDetails()
+ * @method TaxDetail[]|Collection getTaxDetails()
  */
 class SalesInvoice extends AbstractObject
 {
     public array $expands = [
-        //'ApplicationsCreditMemo' => ApplicationsCreditMemo::class, // Array
-        //'ApplicationsDefault'    => ApplicationsDefault::class, // Array
-        'BillingSettings' => BillingSettings::class,
-        'Details'         => SalesInvoiceDetail::class, // Array
-        'DiscountDetails' => SalesInvoiceDiscountDetail::class, // Array
-        'FinancialDetails' => SalesInvoiceDiscountDetail::class, // Array
+        'ApplicationsCreditMemo' => [ApplicationsCreditMemo::class],
+        'ApplicationsInvoice'    => [ApplicationInvoice::class],
+        'BillingSettings'        => BillingSettings::class,
+        'Commissions'            => [Commissions::class],
+        'Details'                => [Detail::class],
+        'DiscountDetails'        => [DiscountDetail::class],
+        'FinancialDetails'       => FinancialDetail::class,
+        'FreightDetails'         => [FreightDetail::class],
+        'TaxDetails'             => [TaxDetail::class],
     ];
 
-    // TODO: Finish
-
+    protected array $dates = [
+        'Date',
+        'DueDate',
+    ];
 }

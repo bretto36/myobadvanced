@@ -8,7 +8,7 @@ use MyobAdvanced\Account;
 use MyobAdvanced\Exception\InvalidCredentialsException;
 use MyobAdvanced\Tests\Helpers\CookieJar;
 
-class LoginTest extends BaseTest
+class LoginTest extends Base
 {
     public function setUp(): void
     {
@@ -32,8 +32,7 @@ class LoginTest extends BaseTest
         $this->myobAdvanced->login();
 
         Http::assertSent(function (Request $request) {
-            return
-                $request->url() == 'https://testing.myobadvanced.com/entity/auth/login';
+            return $request->url() == 'https://testing.myobadvanced.com/entity/auth/login';
         });
 
         $this->assertEquals(2, $this->myobAdvanced->getCookieJar()->count());

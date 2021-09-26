@@ -1,8 +1,8 @@
 <?php
 
-namespace MyobAdvanced;
+namespace MyobAdvanced\SalesInvoice;
 
-use Carbon\Carbon;
+use MyobAdvanced\AbstractObject;
 
 /**
  * @method float getAmount()
@@ -66,6 +66,7 @@ use Carbon\Carbon;
  * @method string getWarehouseID()
  * @method self setWarehouseID(string $value)
  */
-class SalesInvoiceDetail extends AbstractObject
+class Detail extends AbstractObject
 {
+
 }

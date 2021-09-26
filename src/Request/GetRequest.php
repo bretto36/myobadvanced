@@ -2,21 +2,30 @@
 
 namespace MyobAdvanced\Request;
 
-use Illuminate\Http\Client\Response;
 use MyobAdvanced\AbstractObject;
 
 class GetRequest extends Request
 {
-    protected string $method = 'get';
+    protected string|int $id;
 
     protected array $selects = [];
     protected array $expands = [];
 
-    public function __construct($className, $myobAdvanced)
+    public function __construct($className, $myobAdvanced, $id)
     {
-        $this->className = $className;
+        $this->id = $id;
 
-        return parent::__construct($myobAdvanced);
+        return parent::__construct($className, $myobAdvanced);
+    }
+
+    public function getData()
+    {
+        return $this->getQuery();
+    }
+
+    public function getUri()
+    {
+        return parent::getUri() . '/' . $this->id;
     }
 
     /**
@@ -36,7 +45,13 @@ class GetRequest extends Request
      */
     public function addExpand($expand): Request
     {
-        $this->expands[$expand] = $expand;
+        if (!is_array($expand)) {
+            $expand = [$expand];
+        }
+
+        foreach ($expand as $value) {
+            $this->expands[$value] = $value;
+        }
 
         return $this;
     }

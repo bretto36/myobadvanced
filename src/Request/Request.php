@@ -10,7 +10,7 @@ use MyobAdvanced\MyobAdvanced;
 
 abstract class Request
 {
-    protected string $method;
+    protected string $method = 'get';
     protected string $className;
     protected int $attempts = 0;
     protected array $customs = [];
@@ -20,19 +20,30 @@ abstract class Request
 
     abstract protected function formatResponse();
 
-    public function __construct($myobAdvanced)
+    public function __construct($className, $myobAdvanced)
     {
+        $this->className    = $className;
         $this->myobAdvanced = $myobAdvanced;
+    }
+
+    public function getData()
+    {
+        return [];
+    }
+
+    public function getUri()
+    {
+        $class = new $this->className();
+
+        return $class->getEndpoint() . '/' . $class->getEndpointVersion() . '/' . $class->getEntity();
     }
 
     public function send()
     {
-        $class = new $this->className();
-
         $request = Http::baseUrl('https://' . $this->myobAdvanced->getConfiguration()->getHost() . '/entity/')
                        ->withCookies($this->myobAdvanced->getCookieJar()->toArray(), $this->myobAdvanced->getConfiguration()->getHost());
 
-        $this->response = $request->asJson()->{$this->method}($class->getEndpoint() . '/' . $class->getEndpointVersion() . '/' . $class->getEntity());
+        $this->response = $request->asJson()->{$this->method}($this->getUri(), $this->getData());
 
         $this->attempts++;
 

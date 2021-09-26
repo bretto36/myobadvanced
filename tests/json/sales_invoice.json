@@ -1,0 +1,452 @@
+{
+  "id": "ae54df65-378e-e511-80ee-029eaf28db22",
+  "rowNumber": 1,
+  "note": {
+    "value": ""
+  },
+  "Amount": {
+    "value": 5427.9600
+  },
+  "ApplicationsCreditMemo": [],
+  "ApplicationsInvoice": [
+    {
+      "id": "effca1e8-2a8f-e511-80ee-029eaf28db22",
+      "rowNumber": 1,
+      "note": {
+        "value": ""
+      },
+      "AdjustedDocReferenceNbr": {
+        "value": "000001"
+      },
+      "AdjustingDocReferenceNbr": {
+        "value": "000029"
+      },
+      "AdjustmentNbr": {
+        "value": 0
+      },
+      "AmountPaid": {
+        "value": 5427.9600
+      },
+      "Balance": {
+        "value": 0.0
+      },
+      "CashDiscountTaken": {
+        "value": 0.0
+      },
+      "Currency": {
+        "value": "AUD"
+      },
+      "Customer": {
+        "value": "ELITEANSW"
+      },
+      "Description": {},
+      "DocType": {
+        "value": "Payment"
+      },
+      "DocumentType": {
+        "value": "INV"
+      },
+      "PaymentDate": {
+        "value": "2013-08-31T00:00:00+00:00"
+      },
+      "PaymentPeriod": {
+        "value": "022014"
+      },
+      "PaymentRef": {
+        "value": "00009900"
+      },
+      "Status": {
+        "value": "Closed"
+      },
+      "custom": {}
+    }
+  ],
+  "Balance": {
+    "value": 0.0000
+  },
+  "BillingSettings": {
+    "id": "2a230cfa-9820-4c99-ba9c-8ea50ec38a0c",
+    "rowNumber": 1,
+    "note": null,
+    "BillToAddressOverride": {
+      "value": false
+    },
+    "BillToContactOverride": {
+      "value": false
+    },
+    "custom": {}
+  },
+  "Commissions": {
+    "id": "6be9ba90-03e4-44c2-a0e2-1aff65364dcb",
+    "rowNumber": 1,
+    "note": null,
+    "CommissionAmount": {
+      "value": 0.0000
+    },
+    "TotalCommissionableAmount": {
+      "value": 0.0000
+    },
+    "custom": {}
+  },
+  "CreditHold": {
+    "value": false
+  },
+  "Currency": {
+    "value": "NZD"
+  },
+  "CustomerID": {
+    "value": "ELITEANSW"
+  },
+  "CustomerOrder": {},
+  "Date": {
+    "value": "2013-07-07T00:00:00+00:00"
+  },
+  "Description": {},
+  "Details": [
+    {
+      "id": "b154df65-378e-e511-80ee-029eaf28db22",
+      "rowNumber": 1,
+      "note": {
+        "value": ""
+      },
+      "Amount": {
+        "value": 3522.7500
+      },
+      "CalculateDiscountsOnImport": {},
+      "Description": {
+        "value": "Income - Sales"
+      },
+      "DiscountAmount": {
+        "value": 0.0000
+      },
+      "DiscountPercent": {
+        "value": 0.000000
+      },
+      "InventoryID": {
+        "value": "X053XUS120"
+      },
+      "LineNbr": {
+        "value": 1
+      },
+      "ManualDiscount": {
+        "value": true
+      },
+      "OrderLineNbr": {
+        "value": 1
+      },
+      "OrderNbr": {
+        "value": "000486"
+      },
+      "OrderType": {
+        "value": "SO"
+      },
+      "Qty": {
+        "value": 5.000000
+      },
+      "ShipmentNbr": {
+        "value": "000001"
+      },
+      "Subitem": {
+        "value": "0"
+      },
+      "TaxCategory": {
+        "value": "DEFAULT"
+      },
+      "TransactionDescr": {
+        "value": "XRE Desktop"
+      },
+      "UnitPrice": {
+        "value": 704.550000
+      },
+      "UOM": {
+        "value": "PC"
+      },
+      "WarehouseID": {
+        "value": "MLB"
+      },
+      "custom": {}
+    },
+    {
+      "id": "b254df65-378e-e511-80ee-029eaf28db22",
+      "rowNumber": 2,
+      "note": {
+        "value": ""
+      },
+      "Amount": {
+        "value": 1284.3500
+      },
+      "CalculateDiscountsOnImport": {},
+      "Description": {
+        "value": "Income - Sales"
+      },
+      "DiscountAmount": {
+        "value": 0.0000
+      },
+      "DiscountPercent": {
+        "value": 0.000000
+      },
+      "InventoryID": {
+        "value": "P000MSS019"
+      },
+      "LineNbr": {
+        "value": 2
+      },
+      "ManualDiscount": {
+        "value": true
+      },
+      "OrderLineNbr": {
+        "value": 3
+      },
+      "OrderNbr": {
+        "value": "000486"
+      },
+      "OrderType": {
+        "value": "SO"
+      },
+      "Qty": {
+        "value": 5.000000
+      },
+      "ShipmentNbr": {
+        "value": "000001"
+      },
+      "Subitem": {
+        "value": "0"
+      },
+      "TaxCategory": {
+        "value": "DEFAULT"
+      },
+      "TransactionDescr": {
+        "value": "Samsunng monitor 21.5''"
+      },
+      "UnitPrice": {
+        "value": 256.870000
+      },
+      "UOM": {
+        "value": "PC"
+      },
+      "WarehouseID": {
+        "value": "MLB"
+      },
+      "custom": {}
+    },
+    {
+      "id": "b354df65-378e-e511-80ee-029eaf28db22",
+      "rowNumber": 3,
+      "note": {
+        "value": ""
+      },
+      "Amount": {
+        "value": 17.3000
+      },
+      "CalculateDiscountsOnImport": {},
+      "Description": {
+        "value": "Income - Sales"
+      },
+      "DiscountAmount": {
+        "value": 0.0000
+      },
+      "DiscountPercent": {
+        "value": 0.000000
+      },
+      "InventoryID": {
+        "value": "SO00000103"
+      },
+      "LineNbr": {
+        "value": 3
+      },
+      "ManualDiscount": {
+        "value": true
+      },
+      "OrderLineNbr": {
+        "value": 4
+      },
+      "OrderNbr": {
+        "value": "000486"
+      },
+      "OrderType": {
+        "value": "SO"
+      },
+      "Qty": {
+        "value": 5.000000
+      },
+      "ShipmentNbr": {
+        "value": "000001"
+      },
+      "Subitem": {
+        "value": "0"
+      },
+      "TaxCategory": {
+        "value": "DEFAULT"
+      },
+      "TransactionDescr": {
+        "value": "HDMI Male to DVI-D Male"
+      },
+      "UnitPrice": {
+        "value": 3.460000
+      },
+      "UOM": {
+        "value": "METRE"
+      },
+      "WarehouseID": {
+        "value": "MLB"
+      },
+      "custom": {}
+    },
+    {
+      "id": "b454df65-378e-e511-80ee-029eaf28db22",
+      "rowNumber": 4,
+      "note": {
+        "value": ""
+      },
+      "Amount": {
+        "value": 110.1000
+      },
+      "CalculateDiscountsOnImport": {},
+      "Description": {
+        "value": "Income - Sales"
+      },
+      "DiscountAmount": {
+        "value": 0.0000
+      },
+      "DiscountPercent": {
+        "value": 0.000000
+      },
+      "InventoryID": {
+        "value": "SE00001"
+      },
+      "LineNbr": {
+        "value": 4
+      },
+      "ManualDiscount": {
+        "value": true
+      },
+      "OrderLineNbr": {
+        "value": 5
+      },
+      "OrderNbr": {
+        "value": "000486"
+      },
+      "OrderType": {
+        "value": "SO"
+      },
+      "Qty": {
+        "value": 5.000000
+      },
+      "ShipmentNbr": {
+        "value": "000001"
+      },
+      "Subitem": {
+        "value": "0"
+      },
+      "TaxCategory": {
+        "value": "DEFAULT"
+      },
+      "TransactionDescr": {
+        "value": "PCI Express USB 3.0 2 Port Card"
+      },
+      "UnitPrice": {
+        "value": 22.020000
+      },
+      "UOM": {
+        "value": "UNIT"
+      },
+      "WarehouseID": {
+        "value": "MLB"
+      },
+      "custom": {}
+    }
+  ],
+  "DetailTotal": {
+    "value": 4934.5000
+  },
+  "DiscountDetails": [],
+  "DiscountTotal": {
+    "value": 0.0000
+  },
+  "DueDate": {
+    "value": "2013-08-30T00:00:00+00:00"
+  },
+  "FinancialDetails": {
+    "id": "50b25d90-2c8f-4f35-ae2f-9622ae8d3281",
+    "rowNumber": 1,
+    "note": null,
+    "BatchNbr": {
+      "value": "000212"
+    },
+    "CustomerTaxZone": {
+      "value": "DOMESTIC"
+    },
+    "custom": {}
+  },
+  "FreightDetails": [
+    {
+      "id": "b554df65-378e-e511-80ee-029eaf28db22",
+      "rowNumber": 1,
+      "note": {
+        "value": ""
+      },
+      "Description": {
+        "value": "Income - Sales"
+      },
+      "FreightAmount": {
+        "value": 0.000000
+      },
+      "FreightCost": {
+        "value": 0.0000
+      },
+      "LineTotal": {
+        "value": 4799.310000
+      },
+      "PremiumFreightAmount": {
+        "value": 0.000000
+      },
+      "ShipmentNbr": {
+        "value": "000001"
+      },
+      "ShipmentType": {
+        "value": "Shipment"
+      },
+      "TotalFreightAmount": {
+        "value": 0.000000
+      },
+      "Volume": {
+        "value": 0.700000
+      },
+      "Weight": {
+        "value": 63.500000
+      },
+      "custom": {}
+    }
+  ],
+  "FreightPrice": {
+    "value": 0.0000
+  },
+  "Hold": {
+    "value": false
+  },
+  "PaymentTotal": {
+    "value": 5427.96
+  },
+  "Project": {
+    "value": "X"
+  },
+  "ReferenceNbr": {
+    "value": "000001"
+  },
+  "Status": {
+    "value": "Closed"
+  },
+  "TaxTotal": {
+    "value": 493.4600
+  },
+  "Type": {
+    "value": "Invoice"
+  },
+  "VATExemptTotal": {
+    "value": 0.0000
+  },
+  "VATTaxableTotal": {
+    "value": 4934.5000
+  },
+  "custom": {}
+}

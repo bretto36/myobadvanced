@@ -5,13 +5,13 @@ namespace MyobAdvanced\Tests;
 use Illuminate\Support\Facades\Http;
 use MyobAdvanced\Customer;
 
-class CustomerTest extends BaseTest
+class CustomerTest extends Base
 {
     public function testCustomerList()
     {
         Http::fakeSequence()->push($this->loadJsonResponse('customers'));
 
-        $customers = $this->myobAdvanced->search(Customer::class, 5);
+        $customers = $this->myobAdvanced->search(Customer::class, 5)->send();
 
         $this->assertCount(5, $customers);
 
@@ -30,7 +30,7 @@ class CustomerTest extends BaseTest
         Http::fakeSequence()->push($this->loadJsonResponse('customer'));
 
         /** @var Customer $customer */
-        $customer = $this->myobAdvanced->get(Customer::class);
+        $customer = $this->myobAdvanced->get(Customer::class, '579fb525-0f96-e411-b335-e006e6dac1d7')->send();
 
         $this->assertEquals('579fb525-0f96-e411-b335-e006e6dac1d7', $customer->getId());
         $this->assertEquals('ABARTENDE', $customer->getCustomerID());

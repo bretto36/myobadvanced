@@ -5,13 +5,13 @@ namespace MyobAdvanced\Tests;
 use Illuminate\Support\Facades\Http;
 use MyobAdvanced\Account;
 
-class AccountTest extends BaseTest
+class AccountTest extends Base
 {
     public function testAccountList()
     {
         Http::fakeSequence()->push($this->loadJsonResponse('accounts'));
 
-        $accounts = $this->myobAdvanced->search(Account::class, 5);
+        $accounts = $this->myobAdvanced->search(Account::class, 5)->send();
 
         $this->assertCount(5, $accounts);
 
@@ -45,7 +45,7 @@ class AccountTest extends BaseTest
         Http::fakeSequence()->push($this->loadJsonResponse('account'));
 
         /** @var Account $account */
-        $account = $this->myobAdvanced->get(Account::class);
+        $account = $this->myobAdvanced->get(Account::class, 'b49ee0b4-b440-433e-ae89-465daba80d18')->send();
 
         $this->assertEquals('b49ee0b4-b440-433e-ae89-465daba80d18', $account->getId());
         $this->assertEquals('1165', $account->getAccountID());

@@ -3,14 +3,12 @@
 namespace MyobAdvanced\Tests;
 
 use GuzzleHttp\Cookie\SetCookie;
-use Illuminate\Support\Facades\Http;
-use MyobAdvanced\Account;
 use MyobAdvanced\Configuration;
 use MyobAdvanced\MyobAdvanced;
 use MyobAdvanced\Tests\Helpers\CookieJar;
 use Orchestra\Testbench\TestCase as Orchestra;
 
-class BaseTest extends Orchestra
+class Base extends Orchestra
 {
     protected MyobAdvanced $myobAdvanced;
     protected Configuration $configuration;

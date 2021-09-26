@@ -5,13 +5,13 @@ namespace MyobAdvanced\Tests;
 use Illuminate\Support\Facades\Http;
 use MyobAdvanced\Contact;
 
-class ContactTest extends BaseTest
+class ContactTest extends Base
 {
     public function testContactList()
     {
         Http::fakeSequence()->push($this->loadJsonResponse('contacts'));
 
-        $contacts = $this->myobAdvanced->search(Contact::class, 5);
+        $contacts = $this->myobAdvanced->search(Contact::class, 10)->send();
 
         $this->assertCount(10, $contacts);
 
@@ -30,7 +30,7 @@ class ContactTest extends BaseTest
         Http::fakeSequence()->push($this->loadJsonResponse('contact'));
 
         /** @var Contact $contact */
-        $contact = $this->myobAdvanced->get(Contact::class);
+        $contact = $this->myobAdvanced->get(Contact::class, '8aa2b525-0f96-e411-b335-e006e6dac1d7')->send();
 
         $this->assertEquals('8aa2b525-0f96-e411-b335-e006e6dac1d7', $contact->getId());
         $this->assertEquals('3909', $contact->getContactID());
