@@ -33,7 +33,11 @@ class MyobAdvanced
         return $this->cookieJar;
     }
 
-    public function setCookieJar(CookieJarInterface $cookieJar)
+    /**
+     * @param CookieJarInterface $cookieJar
+     * @return $this
+     */
+    public function setCookieJar($cookieJar)
     {
         $this->cookieJar = $cookieJar;
 
