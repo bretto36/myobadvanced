@@ -41,6 +41,10 @@ abstract class Request
 
     public function send()
     {
+        if (!$this->myobAdvanced->isLoggedIn()) {
+            $this->myobAdvanced->login();
+        }
+
         $request = Http::baseUrl($this->myobAdvanced->getConfiguration()->getHost() . '/entity/')
                        ->withCookies($this->myobAdvanced->getCookieJar()->toArray(), $this->myobAdvanced->getConfiguration()->getHost());
 
