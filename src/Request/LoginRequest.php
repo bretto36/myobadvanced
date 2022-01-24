@@ -9,10 +9,11 @@ use MyobAdvanced\Exception\InvalidCredentialsException;
 class LoginRequest extends Request
 {
     /**
+     * @return \GuzzleHttp\Promise\PromiseInterface|\Illuminate\Http\Client\Response
      * @throws InvalidCredentialsException
      * @throws ApiException
      */
-    public function send(): \GuzzleHttp\Promise\PromiseInterface|\Illuminate\Http\Client\Response
+    public function send()
     {
         $this->response = Http::asJson()->post('https://' . $this->myobAdvanced->getConfiguration()->getHost() . '/entity/auth/login', [
             'name'     => $this->myobAdvanced->getConfiguration()->getUsername(),

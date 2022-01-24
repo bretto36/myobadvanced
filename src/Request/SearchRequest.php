@@ -113,7 +113,10 @@ class SearchRequest extends Request implements \IteratorAggregate, \ArrayAccess
         return $this;
     }
 
-    public function formatResponse(): \MyobAdvanced\AbstractObject|\Illuminate\Support\Collection
+    /**
+     * @return \MyobAdvanced\AbstractObject|\Illuminate\Support\Collection
+     */
+    public function formatResponse()
     {
         $this->results = collect();
         foreach ($this->response->object() as $object) {
