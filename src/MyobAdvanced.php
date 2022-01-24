@@ -2,6 +2,7 @@
 
 namespace MyobAdvanced;
 
+use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Cookie\CookieJarInterface;
 use GuzzleHttp\Cookie\SetCookie;
 use MyobAdvanced\Request\GetRequest;
@@ -11,7 +12,8 @@ use MyobAdvanced\Request\SearchRequest;
 class MyobAdvanced
 {
     public Configuration $configuration;
-    public CookieJarInterface $cookieJar;
+    /** @var CookieJarInterface|CookieJar */
+    public $cookieJar;
 
     public function __construct($host, $username, $password = '', $company = '', $branch = '', $cookieJar = null)
     {
@@ -35,7 +37,7 @@ class MyobAdvanced
     }
 
     /**
-     * @param CookieJarInterface $cookieJar
+     * @param CookieJarInterface|CookieJar $cookieJar
      * @return $this
      */
     public function setCookieJar($cookieJar)

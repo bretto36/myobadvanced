@@ -4,9 +4,8 @@ namespace MyobAdvanced\Tests;
 
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
-use MyobAdvanced\Account;
 use MyobAdvanced\Exception\InvalidCredentialsException;
-use MyobAdvanced\Tests\Helpers\CookieJar;
+use MyobAdvanced\Tests\Helpers\TempCookieJar;
 
 class LoginTest extends Base
 {
@@ -15,7 +14,7 @@ class LoginTest extends Base
         parent::setUp();
 
         // Reset the cookie jar
-        $cookieJar = new CookieJar();
+        $cookieJar = new TempCookieJar();
 
         $this->myobAdvanced->setCookieJar($cookieJar);
     }
