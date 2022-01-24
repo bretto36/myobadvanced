@@ -6,6 +6,7 @@ use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use MyobAdvanced\Exception\ApiException;
 use MyobAdvanced\Exception\InvalidCredentialsException;
+use MyobAdvanced\Exception\UnauthorizedException;
 use MyobAdvanced\MyobAdvanced;
 
 abstract class Request
@@ -55,7 +56,7 @@ abstract class Request
 
         try {
             $this->throwExceptions();
-        } catch (InvalidCredentialsException $e) {
+        } catch (UnauthorizedException $e) {
             try {
                 // Only retry once
                 if ($this->attempts >= 1) {
@@ -90,6 +91,12 @@ abstract class Request
             }
 
             throw new ApiException('An unknown error occurred');
+        }
+
+        if ($this->response->clientError()) {
+            if ($this->response->status() == 401) {
+                throw new UnauthorizedException();
+            }
         }
 
         try {
