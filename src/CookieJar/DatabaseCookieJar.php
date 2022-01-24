@@ -7,6 +7,9 @@ use GuzzleHttp\Cookie\SetCookie;
 
 class DatabaseCookieJar extends CookieJar
 {
+    protected $filename;
+    protected $storeSessionCookies;
+
     /**
      * Create a new FileCookieJar object
      *
@@ -19,6 +22,9 @@ class DatabaseCookieJar extends CookieJar
     public function __construct($cookieFile, $storeSessionCookies = false)
     {
         parent::__construct();
+
+        $this->filename            = $cookieFile;
+        $this->storeSessionCookies = $storeSessionCookies;
 
         if (file_exists($cookieFile)) {
             $this->load($cookieFile);
