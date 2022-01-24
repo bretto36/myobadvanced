@@ -117,6 +117,11 @@ use Carbon\Carbon;
  * @method self setWorkgroupDescription(string $value)
  * @method string getNoteID()
  * @method self setNoteID(string $value)
+ *
+ * @method Address getAddress()
+ * @method self setAddress(Address $value)
+ * @method Attribute[] getAttributes()
+ * @method self setAttributes(array $value)
  */
 class Contact extends AbstractObject
 {
