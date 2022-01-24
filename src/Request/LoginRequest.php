@@ -15,7 +15,13 @@ class LoginRequest extends Request
      */
     public function send()
     {
-        $this->response = Http::asJson()->post('https://' . $this->myobAdvanced->getConfiguration()->getHost() . '/entity/auth/login', [
+        $host = $this->myobAdvanced->getConfiguration()->getHost();
+
+        if (substr($host, 0, 4) != 'http') {
+            $host = 'https://' . $host;
+        }
+
+        $this->response = Http::asJson()->post($host . '/entity/auth/login', [
             'name'     => $this->myobAdvanced->getConfiguration()->getUsername(),
             'password' => $this->myobAdvanced->getConfiguration()->getPassword(),
             'company'  => $this->myobAdvanced->getConfiguration()->getCompany(),
