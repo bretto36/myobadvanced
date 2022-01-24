@@ -21,6 +21,10 @@ class Configuration
 
     public function getHost()
     {
+        if (substr($this->host, 0, 4) != 'http') {
+            $this->host = 'https://' . $this->host;
+        }
+
         return $this->host;
     }
 

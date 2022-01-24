@@ -41,13 +41,7 @@ abstract class Request
 
     public function send()
     {
-        $host = $this->myobAdvanced->getConfiguration()->getHost();
-
-        if (substr($host, 0, 4) != 'http') {
-            $host = 'https://' . $host;
-        }
-
-        $request = Http::baseUrl($host . '/entity/')
+        $request = Http::baseUrl($this->myobAdvanced->getConfiguration()->getHost() . '/entity/')
                        ->withCookies($this->myobAdvanced->getCookieJar()->toArray(), $this->myobAdvanced->getConfiguration()->getHost());
 
         $this->response = $request->asJson()->{$this->method}($this->getUri(), $this->getData());
