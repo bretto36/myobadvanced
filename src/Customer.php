@@ -95,12 +95,25 @@ use Carbon\Carbon;
  * @method self setWarehouseID(string $value)
  * @method float getWriteOffLimit()
  * @method self setWriteOffLimit(float $value)
+ *
+ * @method Attribute[] getAttributes()
+ * @method self setAttributes(array $value)
+ * @method Contact getBillingContact()
+ * @method self setBillingContact(Contact $value)
+ * @method Contact getMainContact()
+ * @method self setMainContact(Contact $value)
+ * @method Contact getPrimaryContact()
+ * @method self setPrimaryContact(Contact $value)
+ * @method Contact getShippingContact()
+ * @method self setShippingContact(Contact $value)
  */
 class Customer extends AbstractObject
 {
     public array $expands = [
-        'Attributes'     => Attribute::class,
-        'BillingContact' => Contact::class,
+        'Attributes'      => [Attribute::class],
+        'BillingContact'  => Contact::class,
+        'MainContact'     => Contact::class,
+        'PrimaryContact'  => Contact::class,
+        'ShippingContact' => Contact::class,
     ];
-
 }
