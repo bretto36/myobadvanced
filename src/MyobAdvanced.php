@@ -3,6 +3,7 @@
 namespace MyobAdvanced;
 
 use GuzzleHttp\Cookie\CookieJarInterface;
+use GuzzleHttp\Cookie\SetCookie;
 use MyobAdvanced\Request\GetRequest;
 use MyobAdvanced\Request\LoginRequest;
 use MyobAdvanced\Request\SearchRequest;
@@ -48,7 +49,7 @@ class MyobAdvanced
     {
         $cookies = collect($this->getCookieJar()->toArray());
 
-        return ($cookies->has(['ASP.NET_SessionId', '.ASPXAUTH']));
+        return $cookies->contains('Name', 'ASP.NET_SessionId') && $cookies->contains('Name', '.ASPXAUTH');
     }
 
     public function login()
@@ -73,5 +74,16 @@ class MyobAdvanced
     public function get($className, $id)
     {
         return new GetRequest($className, $this, $id);
+    }
+
+    public function getCookiesFromCookieJar()
+    {
+        $cookies = [];
+        /** @var SetCookie $cookie */
+        foreach ($this->cookieJar as $cookie) {
+            $cookies[$cookie->getName()] = $cookie->getValue();
+        }
+
+        return $cookies;
     }
 }

@@ -47,4 +47,9 @@ class Configuration
     {
         return $this->branch;
     }
+
+    public function getCookieHost()
+    {
+        return strpos($this->getHost(), 'https://') === 0 ? substr($this->getHost(), strlen('https://')) : $this->getHost();
+    }
 }

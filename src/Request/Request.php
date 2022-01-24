@@ -46,7 +46,7 @@ abstract class Request
         }
 
         $request = Http::baseUrl($this->myobAdvanced->getConfiguration()->getHost() . '/entity/')
-                       ->withCookies($this->myobAdvanced->getCookieJar()->toArray(), $this->myobAdvanced->getConfiguration()->getHost());
+                       ->withCookies($this->myobAdvanced->getCookiesFromCookieJar(), $this->myobAdvanced->getConfiguration()->getCookieHost());
 
         $this->response = $request->asJson()->{$this->method}($this->getUri(), $this->getData());
 
