@@ -3,6 +3,7 @@
 namespace MyobAdvanced;
 
 use Carbon\Carbon;
+use MyobAdvanced\SalesInvoice\Detail;
 
 /**
  * @method float getAmount()
@@ -51,13 +52,22 @@ use Carbon\Carbon;
  * @method self setTerms(string $value)
  * @method string getType()
  * @method self setType(string $value)
+ * @method Contact getBillToContact()
+ * @method self setBillToContact(Contact $value)
  */
 class Invoice extends AbstractObject
 {
     public array $expands = [
         //'ApplicationsCreditMemo' => ApplicationsCreditMemo::class, // Array
         //'ApplicationsDefault'    => ApplicationsDefault::class, // Array
-        //'BillToContact'          => ApplicationsDefault::class, // Array
+        'BillToContact'          => Contact::class,
+        'Details'          => [Detail::class],
     ];
 
+    protected array $dates = [
+        'CreatedDateTime',
+        'LastModifiedDateTime',
+        'Date',
+        'DueDate',
+    ];
 }
