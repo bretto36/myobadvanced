@@ -125,7 +125,7 @@ abstract class AbstractObject
         $value = $this->object->$field->value ?? $default;
 
         // Format to Carbon Date
-        if (in_array($field, $this->dates)) {
+        if (in_array($field, $this->dates) && $value) {
             // two types of date format
             // Y-m-d\TH:i:s.uP or Y-m-d\TH:i:sP
             $format = 'Y-m-d\TH:i:s.uP';
