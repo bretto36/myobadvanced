@@ -50,8 +50,6 @@ abstract class Request
 
         $this->response = $request->asJson()->{$this->method}($this->getUri(), $this->getData());
 
-        $this->attempts++;
-
         try {
             $this->throwExceptions();
         } catch (UnauthorizedException $e) {
@@ -61,7 +59,11 @@ abstract class Request
                     throw $e;
                 }
 
+                $this->attempts++;
+
                 $this->myobAdvanced->login();
+
+                $this->send();
             } catch (ApiException $e) {
                 throw $e;
             }
@@ -97,11 +99,7 @@ abstract class Request
             }
         }
 
-        try {
-            $this->response->throw();
-        } catch (\Exception $e) {
-            dd($e);
-        }
+        $this->response->throw();
     }
 
     public function getQuery(): array
