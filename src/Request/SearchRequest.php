@@ -2,17 +2,25 @@
 
 namespace MyobAdvanced\Request;
 
+use ArrayAccess;
+use ArrayIterator;
 use Illuminate\Support\Collection;
+use IteratorAggregate;
+use MyobAdvanced\AbstractObject;
+use MyobAdvanced\Exception\ApiException;
+use MyobAdvanced\Exception\InvalidCredentialsException;
+use MyobAdvanced\Exception\UnauthorizedException;
 
-class SearchRequest extends Request implements \IteratorAggregate, \ArrayAccess
+class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
 {
-    protected array $filters = [];
-    protected array $selects = [];
-    protected array $expands = [];
-    protected int $page = 1;
-    protected int $pageSize = 1000;
-    protected Collection $results;
-    protected int $resultCount = 0;
+    protected $filters = [];
+    protected $selects = [];
+    protected $expands = [];
+    protected $page = 1;
+    protected $pageSize = 1000;
+    /** @var Collection */
+    protected $results;
+    protected $resultCount = 0;
 
     public function __construct($className, $myobAdvanced, $pageSize = null)
     {
@@ -114,7 +122,7 @@ class SearchRequest extends Request implements \IteratorAggregate, \ArrayAccess
     }
 
     /**
-     * @return \MyobAdvanced\AbstractObject|\Illuminate\Support\Collection
+     * @return AbstractObject|Collection
      */
     public function formatResponse()
     {
@@ -128,6 +136,12 @@ class SearchRequest extends Request implements \IteratorAggregate, \ArrayAccess
         return $this->results;
     }
 
+    /**
+     * @return $this|false
+     * @throws ApiException
+     * @throws InvalidCredentialsException
+     * @throws UnauthorizedException
+     */
     public function next()
     {
         if (!$this->resultCount > 0 || $this->resultCount <= $this->pageSize) {
@@ -169,7 +183,7 @@ class SearchRequest extends Request implements \IteratorAggregate, \ArrayAccess
 
     public function getIterator()
     {
-        return new \ArrayIterator($this->results->toArray());
+        return new ArrayIterator($this->results->toArray());
     }
 
     public function offsetGet($offset)

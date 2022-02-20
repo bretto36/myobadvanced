@@ -10,7 +10,7 @@ namespace MyobAdvanced;
  */
 class BillingSettings extends AbstractObject
 {
-    public array $expands = [
+    public $expands = [
         'BillToAddress' => Address::class,
         'BillToContact' => Contact::class,
     ];

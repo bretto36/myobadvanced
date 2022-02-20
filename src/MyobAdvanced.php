@@ -5,13 +5,16 @@ namespace MyobAdvanced;
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Cookie\CookieJarInterface;
 use GuzzleHttp\Cookie\SetCookie;
+use GuzzleHttp\Promise\PromiseInterface;
+use Illuminate\Http\Client\Response;
 use MyobAdvanced\Request\GetRequest;
 use MyobAdvanced\Request\LoginRequest;
 use MyobAdvanced\Request\SearchRequest;
 
 class MyobAdvanced
 {
-    public Configuration $configuration;
+    /** @var Configuration Configuration */
+    public $configuration;
     /** @var CookieJarInterface|CookieJar */
     public $cookieJar;
 
@@ -54,6 +57,11 @@ class MyobAdvanced
         return $cookies->contains('Name', 'ASP.NET_SessionId') && $cookies->contains('Name', '.ASPXAUTH');
     }
 
+    /**
+     * @return PromiseInterface|Response
+     * @throws Exception\ApiException
+     * @throws Exception\InvalidCredentialsException
+     */
     public function login()
     {
         return (new LoginRequest('', $this))->send();
@@ -71,6 +79,7 @@ class MyobAdvanced
 
     /**
      * @param $className
+     * @param $id
      * @return GetRequest
      */
     public function get($className, $id)

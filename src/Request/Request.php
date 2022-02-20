@@ -2,6 +2,7 @@
 
 namespace MyobAdvanced\Request;
 
+use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use MyobAdvanced\Exception\ApiException;
@@ -11,13 +12,15 @@ use MyobAdvanced\MyobAdvanced;
 
 abstract class Request
 {
-    protected string $method = 'get';
-    protected string $className;
-    protected int $attempts = 0;
-    protected array $customs = [];
+    protected $method = 'get';
+    protected $className;
+    protected $attempts = 0;
+    protected $customs = [];
 
-    protected MyobAdvanced $myobAdvanced;
-    protected Response $response;
+    /** @var MyobAdvanced */
+    protected $myobAdvanced;
+    /** @var Response */
+    protected $response;
 
     abstract protected function formatResponse();
 
@@ -39,6 +42,12 @@ abstract class Request
         return $class->getEndpoint() . '/' . $class->getEndpointVersion() . '/' . $class->getEntity();
     }
 
+    /**
+     * @return mixed
+     * @throws ApiException
+     * @throws InvalidCredentialsException
+     * @throws UnauthorizedException
+     */
     public function send()
     {
         if (!$this->myobAdvanced->isLoggedIn()) {
@@ -53,25 +62,28 @@ abstract class Request
         try {
             $this->throwExceptions();
         } catch (UnauthorizedException $e) {
-            try {
-                // Only retry once
-                if ($this->attempts >= 1) {
-                    throw $e;
-                }
-
-                $this->attempts++;
-
-                $this->myobAdvanced->login();
-
-                $this->send();
-            } catch (ApiException $e) {
+            // Only retry once
+            if ($this->attempts >= 1) {
                 throw $e;
             }
+
+            $this->attempts++;
+
+            $this->myobAdvanced->login();
+
+            $this->send();
         }
 
         return $this->formatResponse();
     }
 
+    /**
+     * @return void
+     * @throws ApiException
+     * @throws InvalidCredentialsException
+     * @throws UnauthorizedException
+     * @throws RequestException
+     */
     protected function throwExceptions()
     {
         if ($this->response->successful()) {
@@ -84,9 +96,8 @@ abstract class Request
             $object = $this->response->object();
 
             if (isset($object->exceptionMessage)) {
-                switch ($object->exceptionMessage) {
-                    case 'Error: Invalid credentials. Please try again.':
-                        throw new InvalidCredentialsException($object->exceptionMessage);
+                if ($object->exceptionMessage == 'Error: Invalid credentials. Please try again.') {
+                    throw new InvalidCredentialsException($object->exceptionMessage);
                 }
             }
 

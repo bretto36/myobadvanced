@@ -57,14 +57,14 @@ use MyobAdvanced\SalesInvoice\Detail;
  */
 class Invoice extends AbstractObject
 {
-    public array $expands = [
+    public $expands = [
         //'ApplicationsCreditMemo' => ApplicationsCreditMemo::class, // Array
         //'ApplicationsDefault'    => ApplicationsDefault::class, // Array
-        'BillToContact'          => Contact::class,
-        'Details'          => [Detail::class],
+        'BillToContact' => Contact::class,
+        'Details'       => [Detail::class],
     ];
 
-    protected array $dates = [
+    protected $dates = [
         'CreatedDateTime',
         'LastModifiedDateTime',
         'Date',

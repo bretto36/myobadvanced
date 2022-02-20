@@ -69,7 +69,7 @@ use MyobAdvanced\SalesInvoice\TaxDetail;
  */
 class SalesInvoice extends AbstractObject
 {
-    public array $expands = [
+    public $expands = [
         'ApplicationsCreditMemo' => [ApplicationsCreditMemo::class],
         'ApplicationsInvoice'    => [ApplicationInvoice::class],
         'BillingSettings'        => BillingSettings::class,
@@ -81,7 +81,7 @@ class SalesInvoice extends AbstractObject
         'TaxDetails'             => [TaxDetail::class],
     ];
 
-    protected array $dates = [
+    protected $dates = [
         'Date',
         'DueDate',
     ];

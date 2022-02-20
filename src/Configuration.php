@@ -4,11 +4,11 @@ namespace MyobAdvanced;
 
 class Configuration
 {
-    public string $host;
-    public string $username;
-    public string $password;
-    public string $company;
-    public string $branch;
+    public $host;
+    public $username;
+    public $password;
+    public $company;
+    public $branch;
 
     public function __construct($host = '', $username = '', $password = '', $company = '', $branch = '')
     {

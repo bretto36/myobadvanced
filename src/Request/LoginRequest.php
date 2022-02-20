@@ -2,6 +2,8 @@
 
 namespace MyobAdvanced\Request;
 
+use GuzzleHttp\Promise\PromiseInterface;
+use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use MyobAdvanced\Exception\ApiException;
 use MyobAdvanced\Exception\InvalidCredentialsException;
@@ -9,7 +11,7 @@ use MyobAdvanced\Exception\InvalidCredentialsException;
 class LoginRequest extends Request
 {
     /**
-     * @return \GuzzleHttp\Promise\PromiseInterface|\Illuminate\Http\Client\Response
+     * @return PromiseInterface|Response
      * @throws InvalidCredentialsException
      * @throws ApiException
      */
@@ -34,8 +36,8 @@ class LoginRequest extends Request
         return $this->response;
     }
 
-    protected function formatResponse()
+    public function formatResponse()
     {
-        return;
+        return '';
     }
 }

@@ -109,7 +109,7 @@ use Carbon\Carbon;
  */
 class Customer extends AbstractObject
 {
-    public array $expands = [
+    public $expands = [
         'Attributes'      => [Attribute::class],
         'BillingContact'  => Contact::class,
         'MainContact'     => Contact::class,

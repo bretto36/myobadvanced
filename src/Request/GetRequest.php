@@ -6,10 +6,10 @@ use MyobAdvanced\AbstractObject;
 
 class GetRequest extends Request
 {
-    protected string|int $id;
+    protected $id;
 
-    protected array $selects = [];
-    protected array $expands = [];
+    protected $selects = [];
+    protected $expands = [];
 
     public function __construct($className, $myobAdvanced, $id)
     {

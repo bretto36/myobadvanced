@@ -4,6 +4,7 @@ namespace MyobAdvanced\CookieJar;
 
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Cookie\SetCookie;
+use RuntimeException;
 
 class DatabaseCookieJar extends CookieJar
 {
@@ -17,7 +18,7 @@ class DatabaseCookieJar extends CookieJar
      * @param bool $storeSessionCookies Set to true to store session cookies
      *                                  in the cookie jar.
      *
-     * @throws \RuntimeException if the file cannot be found or created
+     * @throws RuntimeException if the file cannot be found or created
      */
     public function __construct($cookieFile, $storeSessionCookies = false)
     {
@@ -43,7 +44,7 @@ class DatabaseCookieJar extends CookieJar
      * Saves the cookies to a file.
      *
      * @param string $filename File to save
-     * @throws \RuntimeException if the file cannot be found or created
+     * @throws RuntimeException if the file cannot be found or created
      */
     public function save($filename)
     {
@@ -57,7 +58,7 @@ class DatabaseCookieJar extends CookieJar
 
         $jsonStr = \GuzzleHttp\json_encode($json);
         if (false === file_put_contents($filename, $jsonStr, LOCK_EX)) {
-            throw new \RuntimeException("Unable to save file {$filename}");
+            throw new RuntimeException("Unable to save file $filename");
         }
     }
 
@@ -67,13 +68,13 @@ class DatabaseCookieJar extends CookieJar
      * Old cookies are kept unless overwritten by newly loaded ones.
      *
      * @param string $filename Cookie file to load.
-     * @throws \RuntimeException if the file cannot be loaded.
+     * @throws RuntimeException if the file cannot be loaded.
      */
     public function load($filename)
     {
         $json = file_get_contents($filename);
         if (false === $json) {
-            throw new \RuntimeException("Unable to load file {$filename}");
+            throw new RuntimeException("Unable to load file $filename");
         } elseif ($json === '') {
             return;
         }
@@ -84,7 +85,7 @@ class DatabaseCookieJar extends CookieJar
                 $this->setCookie(new SetCookie($cookie));
             }
         } elseif (strlen($data)) {
-            throw new \RuntimeException("Invalid cookie file: {$filename}");
+            throw new RuntimeException("Invalid cookie file: $filename");
         }
     }
 

@@ -4,29 +4,30 @@ namespace MyobAdvanced;
 
 use Carbon\Carbon;
 use PHPUnit\Runner\Exception;
+use stdClass;
 
 abstract class AbstractObject
 {
-    public string $endpoint = 'Default';
-    public string $endpointVersion = '20.200.001';
+    public $endpoint = 'Default';
+    public $endpointVersion = '20.200.001';
 
     // The underlying object from the API
-    public object $object;
+    public $object;
     // A hash that is stored to determine if the entity has changed when save is called
-    public string $hash;
+    public $hash;
     // If true this means the object already has an ID associated with it and any save will attempt to do a PUT request
-    public bool $saved = false;
+    public $saved = false;
 
-    public array $expands = [];
+    public $expands = [];
 
-    protected array $dates = [
+    protected $dates = [
         'CreatedDateTime',
         'LastModifiedDateTime',
     ];
 
     public function __construct($object = null)
     {
-        $this->object = new \stdClass();
+        $this->object = new stdClass();
 
         if ($object) {
             $this->loadObject(is_object($object) ? $object : json_decode($object, false));
@@ -106,9 +107,7 @@ abstract class AbstractObject
             }
 
             // Put request to save
-            $result = false;
-
-            return $result;
+            return false;
         }
 
         // Post Request
