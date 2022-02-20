@@ -4,6 +4,7 @@ namespace MyobAdvanced\Request;
 
 use ArrayAccess;
 use ArrayIterator;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use IteratorAggregate;
 use MyobAdvanced\AbstractObject;
@@ -114,6 +115,8 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
 
         if (is_string($value)) {
             $value = '\'' . $value . '\'';
+        } else if (is_a($value, Carbon::class)) {
+            $value = 'datetimeoffset\'' . $value->format('Y-m-d\TH:i:s') . '\'';
         }
 
         $this->filters[] = $field . ' ' . $operation . ' ' . $value;
