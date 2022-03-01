@@ -1,0 +1,1009 @@
+{
+  "id": "d7dc98aa-9ab1-4e3e-8dc5-33396f9a5f82",
+  "rowNumber": 1,
+  "note": null,
+  "AccountRef": {},
+  "ApplyOverdueCharges": {},
+  "Attributes": [
+    {
+      "id": "2b97618a-35d9-4167-a3be-20302f51c01e",
+      "rowNumber": 1,
+      "note": null,
+      "AttributeDescription": {},
+      "AttributeID": {},
+      "RefNoteID": {},
+      "Required": {},
+      "Value": {},
+      "ValueDescription": {},
+      "custom": {
+        "Answers": {
+          "AttributeID": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "NoteID": {
+            "type": "CustomGuidField",
+            "value": null
+          }
+        }
+      }
+    }
+  ],
+  "AutoApplyPayments": {},
+  "BillingAddressOverride": {},
+  "BillingContact": {
+    "id": "c50c666e-ebc6-43f1-8a76-54f32d797feb",
+    "rowNumber": 1,
+    "note": null,
+    "Activities": [],
+    "Address": {
+      "id": "a4b21295-1a14-403c-93e0-0ed85a20d87f",
+      "rowNumber": 1,
+      "note": null,
+      "AddressLine1": {},
+      "AddressLine2": {},
+      "City": {},
+      "Country": {},
+      "PostalCode": {},
+      "State": {},
+      "custom": {}
+    },
+    "AddressValidated": {},
+    "Attention": {},
+    "Attributes": [],
+    "Campaigns": [],
+    "Cases": [],
+    "ContactID": {},
+    "DisplayName": {},
+    "Duplicates": [],
+    "Email": {},
+    "Fax": {},
+    "FirstName": {},
+    "JobTitle": {},
+    "LastName": {},
+    "MarketingLists": [],
+    "MiddleName": {},
+    "Notifications": [],
+    "Opportunities": [],
+    "Phone1": {},
+    "Phone1Type": {},
+    "Phone2": {},
+    "Phone2Type": {},
+    "Relations": [],
+    "Title": {},
+    "UserInfo": null,
+    "WebSite": {},
+    "custom": {
+      "BillAddress": {
+        "NoteID": {
+          "type": "CustomGuidField",
+          "value": null
+        }
+      },
+      "BillContact": {
+        "FaxType": {
+          "type": "CustomStringField",
+          "value": null
+        },
+        "NoteID": {
+          "type": "CustomGuidField",
+          "value": null
+        }
+      }
+    }
+  },
+  "BillingContactOverride": {},
+  "Contacts": [
+    {
+      "id": "07a31aa7-8e87-4c17-94af-7511712fe32a",
+      "rowNumber": 1,
+      "note": null,
+      "Contact": {
+        "id": "f066ea42-51ba-46ca-8c6d-605f5d55a4b8",
+        "rowNumber": 1,
+        "note": null,
+        "Activities": [],
+        "Address": {
+          "id": "223ab8a3-5e55-4305-9c89-099ece2a3e60",
+          "rowNumber": 1,
+          "note": null,
+          "AddressLine1": {},
+          "AddressLine2": {},
+          "City": {},
+          "Country": {},
+          "PostalCode": {},
+          "State": {},
+          "custom": {}
+        },
+        "AddressValidated": {},
+        "Attributes": [],
+        "Campaigns": [],
+        "Cases": [],
+        "ContactID": {},
+        "DisplayName": {},
+        "Duplicates": [],
+        "Email": {},
+        "Fax": {},
+        "FirstName": {},
+        "JobTitle": {},
+        "LastName": {},
+        "MarketingLists": [],
+        "MiddleName": {},
+        "Notifications": [],
+        "Opportunities": [],
+        "Phone1": {},
+        "Phone1Type": {},
+        "Phone2": {},
+        "Phone2Type": {},
+        "Relations": [],
+        "Title": {},
+        "UserInfo": null,
+        "WebSite": {},
+        "custom": {}
+      },
+      "ContactID": {},
+      "custom": {
+        "Contacts": {
+          "IsActive": {
+            "type": "CustomBooleanField",
+            "value": null
+          },
+          "IsPrimary": {
+            "type": "CustomBooleanField",
+            "value": null
+          },
+          "OwnerID": {
+            "type": "CustomIntField",
+            "value": null
+          },
+          "FullName": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "ClassID": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "LastModifiedDateTime": {
+            "type": "CustomDateTimeField",
+            "value": null
+          },
+          "CreatedDateTime": {
+            "type": "CustomDateTimeField",
+            "value": null
+          },
+          "Source": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "AssignDate": {
+            "type": "CustomDateTimeField",
+            "value": null
+          },
+          "DuplicateStatus": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "Phone3": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "DateOfBirth": {
+            "type": "CustomDateTimeField",
+            "value": null
+          },
+          "Gender": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "Method": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "NoCall": {
+            "type": "CustomBooleanField",
+            "value": null
+          },
+          "NoEMail": {
+            "type": "CustomBooleanField",
+            "value": null
+          },
+          "NoFax": {
+            "type": "CustomBooleanField",
+            "value": null
+          },
+          "NoMail": {
+            "type": "CustomBooleanField",
+            "value": null
+          },
+          "NoMarketing": {
+            "type": "CustomBooleanField",
+            "value": null
+          },
+          "NoMassMail": {
+            "type": "CustomBooleanField",
+            "value": null
+          },
+          "CampaignID": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "Phone3Type": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "FaxType": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "MaritalStatus": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "Spouse": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "Status": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "Resolution": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "LanguageID": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "CanBeMadePrimary": {
+            "type": "CustomBooleanField",
+            "value": null
+          },
+          "NoteText": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "NoteID": {
+            "type": "CustomGuidField",
+            "value": null
+          }
+        }
+      }
+    }
+  ],
+  "CreatedDateTime": {},
+  "CreditVerificationRules": {
+    "id": "6700bba1-5edc-4717-a71e-ded38778249d",
+    "rowNumber": 1,
+    "note": null,
+    "CreditDaysPastDue": {},
+    "CreditLimit": {},
+    "CreditVerification": {},
+    "FirstDueDate": {},
+    "OpenOrdersBalance": {},
+    "RemainingCreditLimit": {},
+    "UnreleasedBalance": {},
+    "custom": {
+      "CustomerBalance": {
+        "Balance": {
+          "type": "CustomDecimalField",
+          "value": null
+        },
+        "ConsolidatedBalance": {
+          "type": "CustomDecimalField",
+          "value": null
+        },
+        "SignedDepositsBalance": {
+          "type": "CustomDecimalField",
+          "value": null
+        },
+        "RetainageBalance": {
+          "type": "CustomDecimalField",
+          "value": null
+        },
+        "UnreleasedBalance": {
+          "type": "CustomDecimalField",
+          "value": null
+        },
+        "OpenOrdersBalance": {
+          "type": "CustomDecimalField",
+          "value": null
+        },
+        "RemainingCreditLimit": {
+          "type": "CustomDecimalField",
+          "value": null
+        },
+        "OldInvoiceDate": {
+          "type": "CustomDateTimeField",
+          "value": null
+        }
+      }
+    }
+  },
+  "CurrencyID": {},
+  "CurrencyRateType": {},
+  "CustomerClass": {},
+  "CustomerID": {},
+  "CustomerName": {},
+  "EnableCurrencyOverride": {},
+  "EnableRateOverride": {},
+  "EnableWriteOffs": {},
+  "FamilyGroup": {},
+  "FOBPoint": {},
+  "LastModifiedDateTime": {},
+  "LeadTimedays": {},
+  "LocationName": {},
+  "MainContact": {
+    "id": "9c6b121a-20f9-4b8c-b76a-091c397cceb9",
+    "rowNumber": 1,
+    "note": null,
+    "Activities": [],
+    "Address": {
+      "id": "5e3a7f8f-93bf-4c5a-ba65-a0af36fb1efb",
+      "rowNumber": 1,
+      "note": null,
+      "AddressLine1": {},
+      "AddressLine2": {},
+      "City": {},
+      "Country": {},
+      "PostalCode": {},
+      "State": {},
+      "custom": {}
+    },
+    "AddressValidated": {},
+    "Attention": {},
+    "Attributes": [],
+    "Campaigns": [],
+    "Cases": [],
+    "CompanyName": {},
+    "ContactID": {},
+    "DisplayName": {},
+    "Duplicates": [],
+    "Email": {},
+    "Fax": {},
+    "FirstName": {},
+    "JobTitle": {},
+    "LastName": {},
+    "MarketingLists": [],
+    "MiddleName": {},
+    "Notifications": [],
+    "Opportunities": [],
+    "Phone1": {},
+    "Phone1Type": {},
+    "Phone2": {},
+    "Phone2Type": {},
+    "Relations": [],
+    "Title": {},
+    "UserInfo": null,
+    "WebSite": {},
+    "custom": {
+      "DefAddress": {
+        "NoteID": {
+          "type": "CustomGuidField",
+          "value": null
+        }
+      },
+      "DefContact": {
+        "DateOfBirth": {
+          "type": "CustomDateTimeField",
+          "value": null
+        },
+        "DateOfDeath": {
+          "type": "CustomDateTimeField",
+          "value": null
+        },
+        "Gender": {
+          "type": "CustomStringField",
+          "value": null
+        },
+        "NoteID": {
+          "type": "CustomGuidField",
+          "value": null
+        },
+        "Phone1Type": {
+          "type": "CustomStringField",
+          "value": null
+        },
+        "Phone1": {
+          "type": "CustomStringField",
+          "value": null
+        },
+        "Phone2Type": {
+          "type": "CustomStringField",
+          "value": null
+        },
+        "Phone2": {
+          "type": "CustomStringField",
+          "value": null
+        },
+        "FaxType": {
+          "type": "CustomStringField",
+          "value": null
+        },
+        "Fax": {
+          "type": "CustomStringField",
+          "value": null
+        },
+        "EMail": {
+          "type": "CustomStringField",
+          "value": null
+        },
+        "WebSite": {
+          "type": "CustomStringField",
+          "value": null
+        },
+        "ConsentAgreement": {
+          "type": "CustomBooleanField",
+          "value": null
+        },
+        "ConsentDate": {
+          "type": "CustomDateTimeField",
+          "value": null
+        },
+        "ConsentExpirationDate": {
+          "type": "CustomDateTimeField",
+          "value": null
+        }
+      }
+    }
+  },
+  "ManagerID": {},
+  "MultiCurrencyStatements": {},
+  "OrderPriority": {},
+  "ParentRecord": {},
+  "PartnerID": {},
+  "PaymentInstructions": [
+    {
+      "id": "aecf6b21-f8be-483e-924c-5714404364a4",
+      "rowNumber": 1,
+      "note": null,
+      "Description": {},
+      "LocationID": {},
+      "PaymentInstructionsID": {},
+      "PaymentMethod": {},
+      "Value": {},
+      "custom": {
+        "DefPaymentMethodInstanceDetails": {
+          "PaymentMethodID": {
+            "type": "CustomStringField",
+            "value": null
+          },
+          "NoteID": {
+            "type": "CustomGuidField",
+            "value": null
+          }
+        }
+      }
+    }
+  ],
+  "PriceClassID": {},
+  "PrimaryContact": {
+    "id": "83486203-afc5-487d-83b4-003452d03478",
+    "rowNumber": 1,
+    "note": null,
+    "Active": {},
+    "Activities": [],
+    "Address": null,
+    "Attributes": [],
+    "BusinessAccount": {},
+    "Campaigns": [],
+    "Cases": [],
+    "CompanyName": {},
+    "ContactClass": {},
+    "ContactID": {},
+    "ContactMethod": {},
+    "DateOfBirth": {},
+    "DisplayName": {},
+    "DoNotCall": {},
+    "DoNotEmail": {},
+    "DoNotFax": {},
+    "DoNotMail": {},
+    "Duplicate": {},
+    "DuplicateFound": {},
+    "Duplicates": [],
+    "Email": {},
+    "Fax": {},
+    "FaxType": {},
+    "FirstName": {},
+    "Gender": {},
+    "Image": {},
+    "JobTitle": {},
+    "LanguageOrLocale": {},
+    "LastModifiedDateTime": {},
+    "LastName": {},
+    "MaritalStatus": {},
+    "MarketingLists": [],
+    "MiddleName": {},
+    "NoMarketing": {},
+    "NoMassMail": {},
+    "NoteID": {},
+    "Notifications": [],
+    "Opportunities": [],
+    "OverrideAccountAddress": {},
+    "Owner": {},
+    "OwnerEmployeeName": {},
+    "ParentAccount": {},
+    "Phone1": {},
+    "Phone1Type": {},
+    "Phone2": {},
+    "Phone2Type": {},
+    "Phone3": {},
+    "Phone3Type": {},
+    "Reason": {},
+    "Relations": [],
+    "Source": {},
+    "SourceCampaign": {},
+    "SpouseOrPartnerName": {},
+    "Status": {},
+    "Synchronize": {},
+    "Title": {},
+    "Type": {},
+    "UserInfo": null,
+    "WebSite": {},
+    "Workgroup": {},
+    "WorkgroupDescription": {},
+    "custom": {
+      "PrimaryContactCurrent": {
+        "ConsentAgreement": {
+          "type": "CustomBooleanField",
+          "value": null
+        },
+        "ConsentDate": {
+          "type": "CustomDateTimeField",
+          "value": null
+        },
+        "ConsentExpirationDate": {
+          "type": "CustomDateTimeField",
+          "value": null
+        },
+        "NoteID": {
+          "type": "CustomGuidField",
+          "value": null
+        }
+      }
+    }
+  },
+  "PrintDunningLetters": {},
+  "PrintInvoices": {},
+  "PrintStatements": {},
+  "ResidentialDelivery": {},
+  "Salespersons": [
+    {
+      "id": "a4457493-e94c-44bb-a034-07b88f76024c",
+      "rowNumber": 1,
+      "note": null,
+      "Commission": {},
+      "Default": {},
+      "LocationID": {},
+      "LocationName": {},
+      "Name": {},
+      "SalespersonID": {},
+      "custom": {}
+    }
+  ],
+  "SaturdayDelivery": {},
+  "SendDunningLettersbyEmail": {},
+  "SendInvoicesbyEmail": {},
+  "SendStatementsbyEmail": {},
+  "ShippingAddressOverride": {},
+  "ShippingBranch": {},
+  "ShippingContact": {
+    "id": "9e927a89-4c53-4447-a8b4-16868fcac956",
+    "rowNumber": 1,
+    "note": null,
+    "Activities": [],
+    "Address": {
+      "id": "8f694153-cec5-451b-86e7-6286bf83fc14",
+      "rowNumber": 1,
+      "note": null,
+      "AddressLine1": {},
+      "AddressLine2": {},
+      "City": {},
+      "Country": {},
+      "PostalCode": {},
+      "State": {},
+      "custom": {}
+    },
+    "AddressValidated": {},
+    "Attention": {},
+    "Attributes": [],
+    "Campaigns": [],
+    "Cases": [],
+    "ContactID": {},
+    "DisplayName": {},
+    "Duplicates": [],
+    "Email": {},
+    "Fax": {},
+    "FirstName": {},
+    "JobTitle": {},
+    "LastName": {},
+    "MarketingLists": [],
+    "MiddleName": {},
+    "Notifications": [],
+    "Opportunities": [],
+    "Phone1": {},
+    "Phone1Type": {},
+    "Phone2": {},
+    "Phone2Type": {},
+    "Relations": [],
+    "Title": {},
+    "UserInfo": null,
+    "WebSite": {},
+    "custom": {
+      "DefLocationAddress": {
+        "NoteID": {
+          "type": "CustomGuidField",
+          "value": null
+        }
+      },
+      "DefLocationContact": {
+        "FaxType": {
+          "type": "CustomStringField",
+          "value": null
+        },
+        "NoteID": {
+          "type": "CustomGuidField",
+          "value": null
+        }
+      }
+    }
+  },
+  "ShippingContactOverride": {},
+  "ShippingRule": {},
+  "ShippingTerms": {},
+  "ShippingZoneID": {},
+  "ShipVia": {},
+  "StatementCycleID": {},
+  "StatementType": {},
+  "Status": {},
+  "TaxRegistrationID": {},
+  "TaxZone": {},
+  "Terms": {},
+  "WarehouseID": {},
+  "WriteOffLimit": {},
+  "custom": {
+    "CurrentCustomer": {
+      "AcctName": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "NoteID": {
+        "type": "CustomGuidField",
+        "value": null
+      },
+      "AcctReferenceNbr": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "LocaleName": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "PrimaryContactID": {
+        "type": "CustomIntField",
+        "value": null
+      },
+      "PrimaryContactID_description": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "UsrParentBAccountID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "TermsID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "StatementCycleId": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "COrgBAccountID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "AutoApplyPayments": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "FinChargeApply": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "SmallBalanceAllow": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "SmallBalanceLimit": {
+        "type": "CustomDecimalField",
+        "value": null
+      },
+      "CuryID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "AllowOverrideCury": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "CuryRateTypeID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "AllowOverrideRate": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "PaymentsByLinesAllowed": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "RetainageApply": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "RetainagePct": {
+        "type": "CustomDecimalField",
+        "value": null
+      },
+      "CreditRule": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CreditLimit": {
+        "type": "CustomDecimalField",
+        "value": null
+      },
+      "CreditDaysPastDue": {
+        "type": "CustomShortField",
+        "value": null
+      },
+      "OverrideBillAddress": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "OverrideBillContact": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "ParentBAccountID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "ConsolidateToParent": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "ConsolidateStatements": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "SharedCreditPolicy": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "MailInvoices": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "PrintInvoices": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "MailDunningLetters": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "PrintDunningLetters": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "SendStatementByEmail": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "PrintStatements": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "StatementType": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "PrintCuryStatements": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "DefPaymentMethodID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "UsrMYPEFamilyGroupID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "DiscTakenAcctID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "DiscTakenSubID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "PrepaymentAcctID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "PrepaymentSubID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "COGSAcctID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "COGSSubID": {
+        "type": "CustomStringField",
+        "value": null
+      }
+    },
+    "BAccount": {
+      "UsrMYPEJurisdiction": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "UsrMYPEEntityTypeID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "NoteText": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "NotePopupTextExists": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "NotePopupText": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "NoteID": {
+        "type": "CustomGuidField",
+        "value": null
+      }
+    },
+    "DefLocation": {
+      "NoteID": {
+        "type": "CustomGuidField",
+        "value": null
+      },
+      "OverrideContact": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "CBranchID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CPriceClassID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CDefProjectID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "TaxRegistrationID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CTaxZoneID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CTaxCalcMode": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CAvalaraExemptionNumber": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CAvalaraCustomerUsageType": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CSiteID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CCarrierID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CShipTermsID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CShipZoneID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CFOBPointID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CResedential": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "CSaturdayDelivery": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "CInsurance": {
+        "type": "CustomBooleanField",
+        "value": null
+      },
+      "CShipComplete": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "COrderPriority": {
+        "type": "CustomShortField",
+        "value": null
+      },
+      "CLeadTime": {
+        "type": "CustomShortField",
+        "value": null
+      },
+      "CCalendarID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CARAccountID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CARSubID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CSalesAcctID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CSalesSubID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CDiscountAcctID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CDiscountSubID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CFreightAcctID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CFreightSubID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CRetainageAcctID": {
+        "type": "CustomStringField",
+        "value": null
+      },
+      "CRetainageSubID": {
+        "type": "CustomStringField",
+        "value": null
+      }
+    }
+  }
+}

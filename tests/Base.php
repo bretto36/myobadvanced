@@ -5,6 +5,7 @@ namespace MyobAdvanced\Tests;
 use GuzzleHttp\Cookie\SetCookie;
 use MyobAdvanced\Configuration;
 use MyobAdvanced\MyobAdvanced;
+use MyobAdvanced\MyobAdvancedServiceProvider;
 use MyobAdvanced\Tests\Helpers\TempCookieJar;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -42,5 +43,10 @@ class Base extends Orchestra
     protected function loadJsonResponse($file)
     {
         return \Illuminate\Support\Facades\File::get(dirname(__FILE__) . '/json/' . $file . '.json');
+    }
+
+    protected function getPackageProviders($app)
+    {
+        return [MyobAdvancedServiceProvider::class];
     }
 }
