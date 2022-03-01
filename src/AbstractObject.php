@@ -6,10 +6,14 @@ use Carbon\Carbon;
 use PHPUnit\Runner\Exception;
 use stdClass;
 
+/**
+ * @method \Illuminate\Support\Carbon getLastModifiedDateTime()
+ */
 abstract class AbstractObject
 {
     public $endpoint = 'Default';
     public $endpointVersion = '20.200.001';
+    public $entity;
 
     // The underlying object from the API
     public $object;
@@ -30,16 +34,30 @@ abstract class AbstractObject
         $this->object = new stdClass();
 
         if ($object) {
-            $this->loadObject(is_object($object) ? $object : json_decode($object, false));
-            $this->saved = true;
+            $this->loadObject($object);
         }
 
+        $this->resetHash();
+    }
+
+    public function resetHash()
+    {
         $this->hash = $this->getHash();
+    }
+
+    public function getObject()
+    {
+        return $this->object;
     }
 
     public function loadObject($object)
     {
+        $object = is_object($object) ? $object : json_decode($object, false);
+
         $this->object = $object;
+
+        $this->resetHash();
+        $this->saved = true;
 
         foreach ($this->expands as $key => $type) {
             if (isset($this->object->$key)) {
@@ -73,14 +91,35 @@ abstract class AbstractObject
         return $this->endpoint;
     }
 
+    public function setEndpoint($endpoint)
+    {
+        $this->endpoint = $endpoint;
+
+        return $this;
+    }
+
     public function getEndpointVersion(): string
     {
         return $this->endpointVersion;
     }
 
+    public function setEndpointVersion($endpointVersion)
+    {
+        $this->endpointVersion = $endpointVersion;
+
+        return $this;
+    }
+
     public function getEntity(): string
     {
         return $this->entity ?? class_basename($this);
+    }
+
+    public function setEntity($entity)
+    {
+        $this->entity = $entity;
+
+        return $this;
     }
 
     public function getHash(): string

@@ -23,7 +23,7 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
     protected $results;
     protected $resultCount = 0;
 
-    public function __construct($className, $myobAdvanced, $pageSize = null)
+    public function __construct($class, $myobAdvanced, $pageSize = null)
     {
         if (null !== $pageSize) {
             $this->pageSize = $pageSize;
@@ -31,7 +31,7 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
 
         $this->results = collect();
 
-        parent::__construct($className, $myobAdvanced);
+        parent::__construct($class, $myobAdvanced);
     }
 
     public function getData()
@@ -131,7 +131,11 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
     {
         $this->results = collect();
         foreach ($this->response->object() as $object) {
-            $this->results->push(new $this->className($object));
+            $class = clone $this->class;
+
+            $class->loadObject($object);
+
+            $this->results->push($class);
         }
 
         $this->resultCount = $this->results->count();

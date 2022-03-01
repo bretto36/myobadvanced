@@ -11,11 +11,11 @@ class GetRequest extends Request
     protected $selects = [];
     protected $expands = [];
 
-    public function __construct($className, $myobAdvanced, $id)
+    public function __construct($class, $myobAdvanced, $id)
     {
         $this->id = $id;
 
-        return parent::__construct($className, $myobAdvanced);
+        return parent::__construct($class, $myobAdvanced);
     }
 
     public function getData()
@@ -83,7 +83,7 @@ class GetRequest extends Request
      */
     protected function formatResponse()
     {
-        return new $this->className($this->response->object());
+        return new $this->class($this->response->object());
     }
 
     public function getQuery(): array

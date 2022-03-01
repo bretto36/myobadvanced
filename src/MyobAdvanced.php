@@ -87,6 +87,11 @@ class MyobAdvanced
         return new GetRequest($className, $this, $id);
     }
 
+    public function adhocSchema($className)
+    {
+        return new GetRequest($className, $this, '$adhocSchema');
+    }
+
     public function getCookiesFromCookieJar()
     {
         $cookies = [];

@@ -13,7 +13,7 @@ use MyobAdvanced\MyobAdvanced;
 abstract class Request
 {
     protected $method = 'get';
-    protected $className;
+    protected $class;
     protected $attempts = 0;
     protected $customs = [];
 
@@ -24,9 +24,13 @@ abstract class Request
 
     abstract protected function formatResponse();
 
-    public function __construct($className, $myobAdvanced)
+    public function __construct($class, $myobAdvanced)
     {
-        $this->className    = $className;
+        if (!empty($class) && !is_object($class)) {
+            $class = new $class();
+        }
+
+        $this->class        = $class;
         $this->myobAdvanced = $myobAdvanced;
     }
 
@@ -37,9 +41,7 @@ abstract class Request
 
     public function getUri()
     {
-        $class = new $this->className();
-
-        return $class->getEndpoint() . '/' . $class->getEndpointVersion() . '/' . $class->getEntity();
+        return $this->class->getEndpoint() . '/' . $this->class->getEndpointVersion() . '/' . $this->class->getEntity();
     }
 
     /**
