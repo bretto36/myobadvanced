@@ -51,3 +51,4 @@ Thumbs.db
 /vendor/
 /tests/RealTest.php
 /tests/test-now.json
+auth.json
