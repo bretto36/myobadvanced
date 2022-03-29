@@ -1,0 +1,158 @@
+[
+  {
+    "id": "579fb525-0f96-e411-b335-e006e6dac1d7",
+    "rowNumber": 1,
+    "note": {
+      "value": ""
+    },
+    "AccountRef": {},
+    "ApplyOverdueCharges": {
+      "value": false
+    },
+    "AutoApplyPayments": {
+      "value": true
+    },
+    "BillingAddressOverride": {
+      "value": true
+    },
+    "BillingContactOverride": {
+      "value": false
+    },
+    "CreatedDateTime": {
+      "value": "2014-10-25T00:31:17.56+00:00"
+    },
+    "CurrencyID": {
+      "value": "AUD"
+    },
+    "CurrencyRateType": {
+      "value": "SPOT"
+    },
+    "CustomerClass": {
+      "value": "DEFAULT"
+    },
+    "CustomerID": {
+      "value": "PAGE2"
+    },
+    "CustomerName": {
+      "value": "BA Industries"
+    },
+    "EnableCurrencyOverride": {
+      "value": true
+    },
+    "EnableRateOverride": {
+      "value": true
+    },
+    "EnableWriteOffs": {
+      "value": true
+    },
+    "FOBPoint": {},
+    "LastModifiedDateTime": {
+      "value": "2021-02-08T15:46:23.611591+00:00"
+    },
+    "LeadTimedays": {},
+    "LocationName": {
+      "value": "Primary Location"
+    },
+    "MainContact": {
+      "id": "5ed14edc-4fed-42c1-969e-5aa42889d8b0",
+      "rowNumber": 1,
+      "note": null,
+      "Attention": {},
+      "CompanyName": {
+        "value": "BA Industries"
+      },
+      "ContactID": {
+        "value": 3153
+      },
+      "DisplayName": {
+        "value": "BA Industries"
+      },
+      "Email": {
+        "value": "ba@industries.com.au"
+      },
+      "Fax": {},
+      "FirstName": {},
+      "JobTitle": {},
+      "LastName": {},
+      "MiddleName": {},
+      "Phone1": {
+        "value": "+61 (2) 3849 9201"
+      },
+      "Phone1Type": {
+        "value": "Business 1"
+      },
+      "Phone2": {},
+      "Phone2Type": {
+        "value": "Business 2"
+      },
+      "Title": {},
+      "WebSite": {},
+      "custom": {}
+    },
+    "MultiCurrencyStatements": {
+      "value": false
+    },
+    "OrderPriority": {
+      "value": 0
+    },
+    "ParentRecord": {},
+    "PriceClassID": {
+      "value": "A"
+    },
+    "PrintDunningLetters": {
+      "value": false
+    },
+    "PrintInvoices": {
+      "value": false
+    },
+    "PrintStatements": {
+      "value": true
+    },
+    "ResidentialDelivery": {
+      "value": false
+    },
+    "SaturdayDelivery": {
+      "value": false
+    },
+    "SendDunningLettersbyEmail": {
+      "value": true
+    },
+    "SendInvoicesbyEmail": {
+      "value": true
+    },
+    "SendStatementsbyEmail": {
+      "value": false
+    },
+    "ShippingAddressOverride": {},
+    "ShippingContactOverride": {},
+    "ShippingRule": {
+      "value": "Back Order Allowed"
+    },
+    "ShippingTerms": {},
+    "ShippingZoneID": {},
+    "ShipVia": {
+      "value": "LOCAL"
+    },
+    "StatementCycleID": {
+      "value": "EOTM"
+    },
+    "StatementType": {
+      "value": "Open Item"
+    },
+    "Status": {
+      "value": "Active"
+    },
+    "TaxRegistrationID": {},
+    "TaxZone": {
+      "value": "DOMESTIC"
+    },
+    "Terms": {
+      "value": "30THMONTH"
+    },
+    "WarehouseID": {},
+    "WriteOffLimit": {
+      "value": 5.0000
+    },
+    "custom": {}
+  }
+]

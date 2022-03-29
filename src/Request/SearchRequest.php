@@ -8,9 +8,6 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use IteratorAggregate;
 use MyobAdvanced\AbstractObject;
-use MyobAdvanced\Exception\ApiException;
-use MyobAdvanced\Exception\InvalidCredentialsException;
-use MyobAdvanced\Exception\UnauthorizedException;
 
 class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
 {
@@ -115,7 +112,7 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
 
         if (is_string($value)) {
             $value = '\'' . $value . '\'';
-        } else if (is_a($value, Carbon::class)) {
+        } elseif (is_a($value, Carbon::class)) {
             $value = 'datetimeoffset\'' . $value->format('Y-m-d\TH:i:s') . '\'';
         }
 
@@ -145,9 +142,6 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
 
     /**
      * @return $this|false
-     * @throws ApiException
-     * @throws InvalidCredentialsException
-     * @throws UnauthorizedException
      */
     public function next()
     {
@@ -156,8 +150,6 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
         }
 
         $this->page++;
-
-        $this->send();
 
         return $this;
     }

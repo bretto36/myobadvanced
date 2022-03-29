@@ -2,6 +2,7 @@
 
 namespace MyobAdvanced\Tests;
 
+use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
 use MyobAdvanced\Customer;
 
@@ -23,6 +24,26 @@ class CustomerTest extends Base
         $this->assertEquals('Active', $customer->getStatus());
         $this->assertEquals('2021-02-08 15:46:23', $customer->getLastModifiedDateTime()->format('Y-m-d H:i:s'));
         $this->assertEquals('DEFAULT', $customer->getCustomerClass());
+    }
+
+    public function testCustomerListPagination()
+    {
+        Http::fakeSequence()
+            ->push($this->loadJsonResponse('customers'))
+            ->push($this->loadJsonResponse('customers_page2'));
+
+        $query = $this->myobAdvanced->search(Customer::class, 5);
+
+        $customers = [];
+        do {
+            $results = $query->send();
+
+            foreach ($results as $customer) {
+                $customers[] = $customer;
+            }
+        } while ($query->next());
+
+        $this->assertCount(6, $customers);
     }
 
     public function testCustomerGet()
