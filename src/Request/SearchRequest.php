@@ -176,7 +176,7 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
 
         // Paginate
         $values['$top']    = $this->pageSize;
-        $values['$offset'] = ($this->page - 1) * $this->pageSize;
+        $values['$skip'] = ($this->page - 1) * $this->pageSize;
 
         return $values;
     }
