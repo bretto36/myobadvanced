@@ -151,7 +151,7 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
      */
     public function next()
     {
-        if (!$this->resultCount > 0 || $this->resultCount <= $this->pageSize) {
+        if (!$this->resultCount > 0 || $this->resultCount < $this->pageSize) {
             return false;
         }
 
