@@ -6,6 +6,7 @@ use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use MyobAdvanced\Exception\ApiException;
+use MyobAdvanced\Exception\InvalidCompanyException;
 use MyobAdvanced\Exception\InvalidCredentialsException;
 use MyobAdvanced\Exception\UnauthorizedException;
 use MyobAdvanced\MyobAdvanced;
@@ -98,8 +99,11 @@ abstract class Request
             $object = $this->response->object();
 
             if (isset($object->exceptionMessage)) {
-                if ($object->exceptionMessage == 'Error: Invalid credentials. Please try again.') {
-                    throw new InvalidCredentialsException($object->exceptionMessage);
+                switch($object->exceptionMessage) {
+                    case 'Error: Invalid credentials. Please try again.':
+                        throw new InvalidCredentialsException($object->exceptionMessage);
+                    case 'A proper company ID cannot be determined for the request.':
+                        throw new InvalidCompanyException($object->exceptionMessage);
                 }
             }
 
