@@ -93,8 +93,6 @@ abstract class Request
             return;
         }
 
-        // TODO: Handle Client Error
-
         if ($this->response->serverError()) {
             $object = $this->response->object();
 
@@ -105,6 +103,8 @@ abstract class Request
                     case 'A proper company ID cannot be determined for the request.':
                         throw new InvalidCompanyException($object->exceptionMessage);
                 }
+
+                throw new ApiException($object->exceptionMessage);
             }
 
             throw new ApiException('An unknown error occurred');
