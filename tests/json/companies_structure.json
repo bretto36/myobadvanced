@@ -1,0 +1,76 @@
+{
+  "id": "1712d1a3-d807-42ee-88a0-d4443dedc877",
+  "rowNumber": 1,
+  "note": null,
+  "Results": [
+    {
+      "id": "81d2a148-9163-e411-9b56-001e4f4a3584",
+      "rowNumber": 1,
+      "note": {
+        "value": ""
+      },
+      "BaseCurrencyID": {
+        "value": "AUD"
+      },
+      "BranchCountry": {
+        "value": "AU"
+      },
+      "BranchID": {
+        "value": "ASTRA"
+      },
+      "BranchName": {
+        "value": "Astra Partners"
+      },
+      "BranchStatus": {
+        "value": true
+      },
+      "CompanyID": {
+        "value": "ASTRA"
+      },
+      "CompanyName": {
+        "value": "Astra Partners"
+      },
+      "CompanyStatus": {
+        "value": true
+      },
+      "CompanyType": {
+        "value": "Without Branches"
+      },
+      "custom": {}
+    },
+    {
+      "id": "07cf811e-16d3-eb11-aae5-022d97cd3b56",
+      "rowNumber": 2,
+      "note": {
+        "value": ""
+      },
+      "BaseCurrencyID": {
+        "value": "AUD"
+      },
+      "BranchCountry": {},
+      "BranchID": {
+        "value": "OMNI"
+      },
+      "BranchName": {
+        "value": "Omnicorp Group Pty Ltd"
+      },
+      "BranchStatus": {
+        "value": true
+      },
+      "CompanyID": {
+        "value": "OMNI"
+      },
+      "CompanyName": {
+        "value": "Omnicorp Group Pty Ltd"
+      },
+      "CompanyStatus": {
+        "value": true
+      },
+      "CompanyType": {
+        "value": "Without Branches"
+      },
+      "custom": {}
+    }
+  ],
+  "custom": {}
+}

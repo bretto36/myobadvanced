@@ -35,11 +35,6 @@ abstract class Request
         $this->myobAdvanced = $myobAdvanced;
     }
 
-    public function getData()
-    {
-        return [];
-    }
-
     public function getUri()
     {
         return $this->class->getEndpoint() . '/' . $this->class->getEndpointVersion() . '/' . $this->class->getEntity();
@@ -49,7 +44,7 @@ abstract class Request
      * @return mixed
      * @throws ApiException
      * @throws InvalidCredentialsException
-     * @throws UnauthorizedException
+     * @throws UnauthorizedException|RequestException
      */
     public function send()
     {
@@ -60,7 +55,14 @@ abstract class Request
         $request = Http::baseUrl($this->myobAdvanced->getConfiguration()->getHost() . '/entity/')
                        ->withCookies($this->myobAdvanced->getCookiesFromCookieJar(), $this->myobAdvanced->getConfiguration()->getCookieHost());
 
-        $this->response = $request->asJson()->{$this->method}($this->getUri(), $this->getData());
+        if ($this->method == 'get') {
+            $this->response = $request->asJson()->get($this->getUri(), $this->getQuery());
+        } else {
+            $this->response = $request->asJson()->send($this->method, $this->getUri(), [
+                'query' => $this->getQuery(),
+                'json'  => $this->getBody(),
+            ]);
+        }
 
         try {
             $this->throwExceptions();
@@ -97,7 +99,7 @@ abstract class Request
             $object = $this->response->object();
 
             if (isset($object->exceptionMessage)) {
-                switch($object->exceptionMessage) {
+                switch ($object->exceptionMessage) {
                     case 'Error: Invalid credentials. Please try again.':
                         throw new InvalidCredentialsException($object->exceptionMessage);
                     case 'A proper company ID cannot be determined for the request.':
@@ -123,11 +125,16 @@ abstract class Request
     {
         $values = [];
 
-        // Selects
+        // Customs
         if (!empty($this->customs)) {
             $values['$custom'] = implode(',', $this->customs);
         }
 
         return $values;
+    }
+
+    public function getBody()
+    {
+        return [];
     }
 }

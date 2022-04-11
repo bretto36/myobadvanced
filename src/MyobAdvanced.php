@@ -8,6 +8,7 @@ use GuzzleHttp\Cookie\SetCookie;
 use GuzzleHttp\Promise\PromiseInterface;
 use Illuminate\Http\Client\Response;
 use MyobAdvanced\Request\GetRequest;
+use MyobAdvanced\Request\InquiryRequest;
 use MyobAdvanced\Request\LoginRequest;
 use MyobAdvanced\Request\SearchRequest;
 
@@ -85,6 +86,16 @@ class MyobAdvanced
     public function get($className, $id)
     {
         return new GetRequest($className, $this, $id);
+    }
+
+    /**
+     * @param $className
+     * @param array|null $requestObject
+     * @return InquiryRequest
+     */
+    public function inquiry($className, array $requestObject = null)
+    {
+        return new InquiryRequest($className, $this, $requestObject);
     }
 
     public function adhocSchema($className)

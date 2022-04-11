@@ -18,11 +18,6 @@ class GetRequest extends Request
         return parent::__construct($class, $myobAdvanced);
     }
 
-    public function getData()
-    {
-        return $this->getQuery();
-    }
-
     public function getUri()
     {
         return parent::getUri() . '/' . $this->id;

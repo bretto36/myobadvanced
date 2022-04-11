@@ -8,28 +8,31 @@ use Illuminate\Support\Collection;
 use IteratorAggregate;
 use MyobAdvanced\AbstractObject;
 use MyobAdvanced\Traits\HasExpands;
-use MyobAdvanced\Traits\HasFilters;
 use MyobAdvanced\Traits\HasSelects;
 
-class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
+class InquiryRequest extends Request implements IteratorAggregate, ArrayAccess
 {
-    use HasFilters, HasSelects, HasExpands;
+    use HasSelects, HasExpands;
 
-    protected $page = 1;
-    protected $pageSize = 1000;
+    protected $method = 'PUT';
+    protected $requestObject;
     /** @var Collection */
     protected $results;
     protected $resultCount = 0;
+    protected $rootElement = 'Results';
 
-    public function __construct($class, $myobAdvanced, $pageSize = null)
+    public function __construct($class, $myobAdvanced, $requestObject = null)
     {
-        if (null !== $pageSize) {
-            $this->pageSize = $pageSize;
-        }
-
-        $this->results = collect();
+        $this->results       = collect();
+        $this->requestObject = $requestObject ?: [];
+        $this->expands       = ['Results'];
 
         parent::__construct($class, $myobAdvanced);
+    }
+
+    public function getData()
+    {
+        return $this->requestObject;
     }
 
     /**
@@ -38,7 +41,8 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
     public function formatResponse()
     {
         $this->results = collect();
-        foreach ($this->response->object() as $object) {
+
+        foreach ($this->response->object()->{$this->rootElement} as $object) {
             $class = clone $this->class;
 
             $class->loadObject($object);
@@ -49,21 +53,6 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
         $this->resultCount = $this->results->count();
 
         return $this->results;
-    }
-
-    /**
-     * @return $this|false
-     */
-    public function next()
-    {
-        // If the number of results is less than the page size then we have to have reached the last page
-        if ($this->resultCount < $this->pageSize) {
-            return false;
-        }
-
-        $this->page++;
-
-        return $this;
     }
 
     public function getQuery(): array
@@ -79,15 +68,6 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
         if (!empty($this->expands)) {
             $values['$expand'] = implode(',', $this->expands);
         }
-
-        // Filter
-        if (!empty($this->filters)) {
-            $values['$filter'] = implode(' AND ', $this->filters);
-        }
-
-        // Paginate
-        $values['$top']  = $this->pageSize;
-        $values['$skip'] = ($this->page - 1) * $this->pageSize;
 
         return $values;
     }
