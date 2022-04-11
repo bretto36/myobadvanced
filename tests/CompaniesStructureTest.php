@@ -16,8 +16,10 @@ class CompaniesStructureTest extends Base
 
         Http::assertSent(function (Request $request) {
             // Can't use the Request to check GET Params as the object doesn't understand the data
+            // Also can't get it to send an empty object tag
             return $request->toPsrRequest()->getUri()->getPath() == '/entity/Default/20.200.001/CompaniesStructure'
-                && $request->toPsrRequest()->getUri()->getQuery() == '%24expand=Results';
+                && $request->toPsrRequest()->getUri()->getQuery() == '%24expand=Results'
+                && $request->body() == '{"blankObject":true}';
         });
 
         $this->assertCount(2, $companiesStructures);

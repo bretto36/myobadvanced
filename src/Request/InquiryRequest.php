@@ -23,14 +23,15 @@ class InquiryRequest extends Request implements IteratorAggregate, ArrayAccess
 
     public function __construct($class, $myobAdvanced, $requestObject = null)
     {
-        $this->results       = collect();
-        $this->requestObject = $requestObject ?: [];
         $this->expands       = ['Results'];
+        $this->requestObject = $requestObject ?: ['blankObject' => true];
+
+        $this->results = collect();
 
         parent::__construct($class, $myobAdvanced);
     }
 
-    public function getData()
+    public function getBody()
     {
         return $this->requestObject;
     }

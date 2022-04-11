@@ -58,10 +58,10 @@ abstract class Request
         if ($this->method == 'get') {
             $this->response = $request->asJson()->get($this->getUri(), $this->getQuery());
         } else {
-            $this->response = $request->asJson()->send($this->method, $this->getUri(), [
-                'query' => $this->getQuery(),
-                'json'  => $this->getBody(),
-            ]);
+            $this->response = $request->asJson()
+                                      ->withOptions([
+                                          'query' => $this->getQuery(),
+                                      ])->{$this->method}($this->getUri(), $this->getBody());
         }
 
         try {
@@ -135,6 +135,6 @@ abstract class Request
 
     public function getBody()
     {
-        return [];
+        return null;
     }
 }
