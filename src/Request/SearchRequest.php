@@ -82,7 +82,7 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
 
         // Filter
         if (!empty($this->filters)) {
-            $values['$filter'] = implode(' AND ', $this->filters);
+            $values['$filter'] = implode(' and ', $this->filters);
         }
 
         // Paginate
