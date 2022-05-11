@@ -2,6 +2,9 @@
 
 namespace MyobAdvanced;
 
+use MyobAdvanced\Project\Balance;
+use MyobAdvanced\Project\BillingAndAllocationSettings;
+
 /**
  * @method float getAssets()
  * @method self setAssets(float $value)
@@ -25,8 +28,17 @@ namespace MyobAdvanced;
  * @method self setProjectTemplateID(string $value)
  * @method string getStatus()
  * @method self setStatus(string $value)
+ *
+ * @method BillingAndAllocationSettings getBillingAndAllocationSettings()
+ * @method self setBillingAndAllocationSettings(BillingAndAllocationSettings $value)
+ * @method Balance[] getBalances()
+ * @method self setBalances(BillingAndAllocationSettings[] $value)
  */
 class Project extends AbstractObject
 {
-    public $expands = [];
+    public $expands = [
+        'BillingAndAllocationSettings' => BillingAndAllocationSettings::class,
+        'Balances'                     => [Balance::class],
+        'Invoices'                     => [\MyobAdvanced\Project\Invoice::class],
+    ];
 }
