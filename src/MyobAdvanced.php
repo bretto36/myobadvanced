@@ -14,10 +14,11 @@ use MyobAdvanced\Request\SearchRequest;
 
 class MyobAdvanced
 {
-    /** @var Configuration Configuration */
-    public $configuration;
+    public Configuration $configuration;
     /** @var CookieJarInterface|CookieJar */
-    public $cookieJar;
+    public mixed $cookieJar;
+
+    private array $middleware;
 
     public function __construct($host, $username, $password = '', $company = '', $branch = '', $cookieJar = null)
     {
@@ -40,13 +41,21 @@ class MyobAdvanced
         return $this->cookieJar;
     }
 
-    /**
-     * @param CookieJarInterface|CookieJar $cookieJar
-     * @return $this
-     */
-    public function setCookieJar($cookieJar)
+    public function setCookieJar(CookieJarInterface|CookieJar $cookieJar): static
     {
         $this->cookieJar = $cookieJar;
+
+        return $this;
+    }
+
+    public function getMiddleware()
+    {
+        return $this->middleware;
+    }
+
+    public function setMiddleware(array $middleware): static
+    {
+        $this->middleware = $middleware;
 
         return $this;
     }

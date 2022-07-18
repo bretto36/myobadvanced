@@ -55,6 +55,13 @@ abstract class Request
         $request = Http::baseUrl($this->myobAdvanced->getConfiguration()->getHost() . '/entity/')
                        ->withCookies($this->myobAdvanced->getCookiesFromCookieJar(), $this->myobAdvanced->getConfiguration()->getCookieHost());
 
+        // Add any middleware if applicable
+        if (!empty($this->myobAdvanced->getMiddleware())) {
+            foreach ($this->myobAdvanced->getMiddleware() as $middleware) {
+                $request->withMiddleware($middleware);
+            }
+        }
+
         if ($this->method == 'get') {
             $this->response = $request->asJson()->get($this->getUri(), $this->getQuery());
         } else {
