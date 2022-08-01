@@ -18,7 +18,7 @@ class MyobAdvanced
     /** @var CookieJarInterface|CookieJar */
     public mixed $cookieJar;
 
-    private array $middleware;
+    private array $middleware = [];
 
     public function __construct($host, $username, $password = '', $company = '', $branch = '', $cookieJar = null)
     {

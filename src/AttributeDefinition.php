@@ -22,6 +22,9 @@ use MyobAdvanced\AttributeDefinition\Value;
  * @method self setLastModifiedDateTime(Carbon $value)
  * @method string getRegExp()
  * @method self setRegExp(string $value)
+ *
+ * @method Value[] getValues()
+ * @method self setValues(Value[] $values)
  */
 class AttributeDefinition extends AbstractObject
 {
