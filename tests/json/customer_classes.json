@@ -1,0 +1,148 @@
+[
+  {
+    "id": "3f08d268-3637-49a0-9bbd-bb5d122331a8",
+    "rowNumber": 1,
+    "note": {
+      "value": ""
+    },
+    "ApplyOverdueCharges": {
+      "value": false
+    },
+    "ARAccount": {
+      "value": "12000"
+    },
+    "ARSubaccount": {
+      "value": "000000000"
+    },
+    "AutoApplyPayments": {
+      "value": true
+    },
+    "CashDiscountAccount": {
+      "value": "40050"
+    },
+    "CashDiscountSubaccount": {
+      "value": "000000000"
+    },
+    "ClassID": {
+      "value": "CUSTDFT"
+    },
+    "COGSAccount": {},
+    "COGSSubaccount": {},
+    "Country": {
+      "value": "AU"
+    },
+    "CreatedDateTime": {
+      "value": "1900-01-01T11:00:00+00:00"
+    },
+    "CreditDaysPastDue": {
+      "value": 0
+    },
+    "CreditLimit": {
+      "value": 0.0000
+    },
+    "CreditVerification": {
+      "value": "Days Past Due"
+    },
+    "CurrencyID": {
+      "value": "AUD"
+    },
+    "CurrencyRateType": {
+      "value": "SPOT"
+    },
+    "DefaultLocationIDfromBranch": {
+      "value": false
+    },
+    "DefaultRestrictionGroup": {},
+    "Description": {
+      "value": "Customer Default"
+    },
+    "DiscountAccount": {},
+    "DiscountSubaccount": {},
+    "EnableCurrencyOverride": {
+      "value": true
+    },
+    "EnableRateOverride": {
+      "value": true
+    },
+    "EnableWriteOffs": {
+      "value": true
+    },
+    "FreightAccount": {},
+    "FreightSubaccount": {},
+    "GroupDocumentDiscountLimit": {
+      "value": 0.00
+    },
+    "LastModifiedDateTime": {
+      "value": "2022-08-04T14:58:48.725563+00:00"
+    },
+    "MiscAccount": {},
+    "MiscSubaccount": {},
+    "MultiCurrencyStatements": {
+      "value": false
+    },
+    "OverdueChargeID": {},
+    "OverLimitAmount": {
+      "value": 0.0000
+    },
+    "PaymentMethod": {
+      "value": "CASH"
+    },
+    "PrepaymentAccount": {},
+    "PrepaymentSubaccount": {},
+    "PrintDunningLetters": {
+      "value": false
+    },
+    "PrintInvoices": {
+      "value": false
+    },
+    "PrintStatements": {
+      "value": false
+    },
+    "RequireTaxZone": {
+      "value": true
+    },
+    "SalesAccount": {
+      "value": "40000"
+    },
+    "SalespersonID": {},
+    "SalesSubaccount": {
+      "value": "000000000"
+    },
+    "SendDunningLettersbyEmail": {
+      "value": true
+    },
+    "SendInvoicesbyEmail": {
+      "value": true
+    },
+    "SendStatementsByEmail": {
+      "value": true
+    },
+    "ShippingRule": {
+      "value": "Back Order Allowed"
+    },
+    "ShippingTerms": {},
+    "ShipVia": {
+      "value": "LOCAL"
+    },
+    "StatementCycleID": {
+      "value": "EOTM"
+    },
+    "StatementType": {
+      "value": "Open Item"
+    },
+    "TaxZoneID": {
+      "value": "DOMESTIC"
+    },
+    "Terms": {
+      "value": "NET14DAYS"
+    },
+    "UnrealizedGainAccount": {},
+    "UnrealizedGainSubaccount": {},
+    "UnrealizedLossAccount": {},
+    "UnrealizedLossSubaccount": {},
+    "WriteOffLimit": {
+      "value": 1.0000
+    },
+    "custom": {}
+  }
+]

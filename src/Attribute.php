@@ -15,6 +15,9 @@ namespace MyobAdvanced;
  * @method self setValue(string $value)
  * @method string getValueDescription()
  * @method self setValueDescription(string $value)
+ *
+ * @method string getDescription()
+ * @method self setDescription(string $value)
  */
 class Attribute extends AbstractObject
 {
