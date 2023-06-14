@@ -107,6 +107,7 @@ use MyobAdvanced\Customer\CustomerContact;
  * @method self setPrimaryContact(Contact $value)
  * @method Contact getShippingContact()
  * @method self setShippingContact(Contact $value)
+ * @method CustomerContact[] getContacts()
  */
 class Customer extends AbstractObject
 {
