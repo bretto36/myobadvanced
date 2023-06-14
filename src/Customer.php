@@ -3,6 +3,7 @@
 namespace MyobAdvanced;
 
 use Carbon\Carbon;
+use MyobAdvanced\Customer\CustomerContact;
 
 /**
  * @method string getAccountRef()
@@ -115,5 +116,6 @@ class Customer extends AbstractObject
         'MainContact'     => Contact::class,
         'PrimaryContact'  => Contact::class,
         'ShippingContact' => Contact::class,
+        'Contacts'        => [CustomerContact::class],
     ];
 }
