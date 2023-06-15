@@ -2,8 +2,6 @@
 
 namespace MyobAdvanced;
 
-use Carbon\Carbon;
-
 /**
  * @method bool hasBaseCurrencyID()
  * @method string getBaseCurrencyID()

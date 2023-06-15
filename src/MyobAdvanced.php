@@ -79,7 +79,7 @@ class MyobAdvanced
 
     /**
      * @param $className
-     * @param null $pageSize
+     * @param  null  $pageSize
      * @return SearchRequest
      */
     public function search($className, $pageSize = null)
@@ -99,7 +99,7 @@ class MyobAdvanced
 
     /**
      * @param $className
-     * @param object|null $requestObject
+     * @param  object|null  $requestObject
      * @return InquiryRequest
      */
     public function inquiry($className, object $requestObject = null)

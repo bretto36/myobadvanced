@@ -53,7 +53,8 @@ abstract class Request
         }
 
         $request = Http::baseUrl($this->myobAdvanced->getConfiguration()->getHost() . '/entity/')
-                       ->withCookies($this->myobAdvanced->getCookiesFromCookieJar(), $this->myobAdvanced->getConfiguration()->getCookieHost());
+            ->timeout(60)
+            ->withCookies($this->myobAdvanced->getCookiesFromCookieJar(), $this->myobAdvanced->getConfiguration()->getCookieHost());
 
         // Add any middleware if applicable
         if (!empty($this->myobAdvanced->getMiddleware())) {
@@ -66,9 +67,9 @@ abstract class Request
             $this->response = $request->asJson()->get($this->getUri(), $this->getQuery());
         } else {
             $this->response = $request->asJson()
-                                      ->withOptions([
-                                          'query' => $this->getQuery(),
-                                      ])->{$this->method}($this->getUri(), $this->getBody());
+                ->withOptions([
+                    'query' => $this->getQuery(),
+                ])->{$this->method}($this->getUri(), $this->getBody());
         }
 
         try {
