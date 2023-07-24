@@ -53,7 +53,7 @@ abstract class Request
         }
 
         $request = Http::baseUrl($this->myobAdvanced->getConfiguration()->getHost() . '/entity/')
-            ->timeout(60)
+            ->timeout($this->myobAdvanced->getConfiguration()->getOptions()['timeout'] ?? 10)
             ->withCookies($this->myobAdvanced->getCookiesFromCookieJar(), $this->myobAdvanced->getConfiguration()->getCookieHost());
 
         // Add any middleware if applicable

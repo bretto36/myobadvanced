@@ -38,7 +38,7 @@ class CustomerClassTest extends Base
 
         $attribute = $customerClass->getAttributes()->shift();
 
-        $this->assertEquals('CUSTDFT', $attribute->getClassID());
-        dump($attribute);
+        $this->assertEquals('ENTITYTYPE', $attribute->getAttributeID());
+        $this->assertEquals('Entity Type', $attribute->getDescription());
     }
 }

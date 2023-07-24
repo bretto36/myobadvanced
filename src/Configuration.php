@@ -10,6 +10,8 @@ class Configuration
     public $company;
     public $branch;
 
+    protected $options = [];
+
     public function __construct($host = '', $username = '', $password = '', $company = '', $branch = '')
     {
         $this->host     = $host;
@@ -17,6 +19,13 @@ class Configuration
         $this->password = $password;
         $this->company  = $company;
         $this->branch   = $branch;
+    }
+
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 
     public function getHost()
@@ -51,5 +60,10 @@ class Configuration
     public function getCookieHost()
     {
         return strpos($this->getHost(), 'https://') === 0 ? substr($this->getHost(), strlen('https://')) : $this->getHost();
+    }
+
+    public function getOptions()
+    {
+        return $this->options;
     }
 }
