@@ -121,4 +121,18 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
     {
         return $this->results->shift($count);
     }
+
+    public function setPage(int $page)
+    {
+        $this->page = $page;
+
+        return $this;
+    }
+
+    public function setPageSize(int $pageSize)
+    {
+        $this->pageSize = $pageSize;
+
+        return $this;
+    }
 }
