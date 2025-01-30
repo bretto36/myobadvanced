@@ -25,18 +25,21 @@ class SearchRequestTest extends Base
                 Str::contains($request->url(), '/entity/Default/20.200.001/Customer');
         });
     }
+
     public function testStringFilter()
     {
         Http::fakeSequence()->push($this->loadJsonResponse('customers'));
 
         $request = $this->myobAdvanced->search(Customer::class, 5);
 
-        $request->addFilter('CustomerID', 'eq', 'ABARTENDE');
+        $request->addFilter('CustomerID', 'eq', 'ABARTENDE')
+            ->addFilter('Status', 'in', ['Closed', 'Open'])
+            ->addFilter('Reference', 'not in', ['123', '234']);
 
         $request->send();
 
         Http::assertSent(function (Request $request) {
-            return $request['$filter'] == 'CustomerID eq \'ABARTENDE\'' &&
+            return $request['$filter'] == 'CustomerID eq \'ABARTENDE\' and (Status eq \'Closed\' or Status eq \'Open\') and (Reference ne \'123\' and Reference ne \'234\')' &&
                 Str::contains($request->url(), '/entity/Default/20.200.001/Customer');
         });
     }
