@@ -111,7 +111,7 @@ use MyobAdvanced\Customer\CustomerContact;
  */
 class Customer extends AbstractObject
 {
-    public $expands = [
+    public array $expands = [
         'Attributes'      => [Attribute::class],
         'BillingContact'  => Contact::class,
         'MainContact'     => Contact::class,

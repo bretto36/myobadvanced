@@ -36,7 +36,7 @@ use MyobAdvanced\Project\BillingAndAllocationSettings;
  */
 class Project extends AbstractObject
 {
-    public $expands = [
+    public array $expands = [
         'BillingAndAllocationSettings' => BillingAndAllocationSettings::class,
         'Balances'                     => [Balance::class],
         'Invoices'                     => [\MyobAdvanced\Project\Invoice::class],

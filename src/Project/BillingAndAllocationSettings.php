@@ -35,7 +35,7 @@ use MyobAdvanced\AbstractObject;
  */
 class BillingAndAllocationSettings extends AbstractObject
 {
-    protected $dates = [
+    protected array $dates = [
         'LastBillingDate',
         'NextBillingDate',
     ];

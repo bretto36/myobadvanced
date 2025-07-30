@@ -28,7 +28,7 @@ use MyobAdvanced\Employee\EmploymentHistory;
  */
 class Employee extends AbstractObject
 {
-    public $expands = [
+    public array $expands = [
         'Attributes'        => [Attribute::class],
         'ContactInfo'       => ContactInfo::class,
         'Delegates'         => [Delegate::class],

@@ -13,15 +13,13 @@ use MyobAdvanced\MyobAdvanced;
 
 abstract class Request
 {
-    protected $method = 'get';
-    protected $class;
-    protected $attempts = 0;
-    protected $customs = [];
+    protected string $method = 'get';
+    protected mixed $class;
+    protected int $attempts = 0;
+    protected array $customs = [];
 
-    /** @var MyobAdvanced */
-    protected $myobAdvanced;
-    /** @var Response */
-    protected $response;
+    protected MyobAdvanced $myobAdvanced;
+    protected Response $response;
 
     abstract protected function formatResponse();
 
@@ -35,7 +33,7 @@ abstract class Request
         $this->myobAdvanced = $myobAdvanced;
     }
 
-    public function getUri()
+    public function getUri(): string
     {
         return $this->class->getEndpoint() . '/' . $this->class->getEndpointVersion() . '/' . $this->class->getEntity();
     }

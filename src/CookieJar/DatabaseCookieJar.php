@@ -4,31 +4,22 @@ namespace MyobAdvanced\CookieJar;
 
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Cookie\SetCookie;
+use GuzzleHttp\Utils;
 use RuntimeException;
 
 class DatabaseCookieJar extends CookieJar
 {
-    protected $filename;
-    protected $storeSessionCookies;
-
     /**
      * Create a new FileCookieJar object
      *
-     * @param  string  $cookieFile  File to store the cookie data
-     * @param  bool  $storeSessionCookies  Set to true to store session cookies
-     *                                  in the cookie jar.
-     *
      * @throws RuntimeException if the file cannot be found or created
      */
-    public function __construct($cookieFile, $storeSessionCookies = false)
+    public function __construct(protected string $filename, protected bool $storeSessionCookies = false)
     {
         parent::__construct();
 
-        $this->filename            = $cookieFile;
-        $this->storeSessionCookies = $storeSessionCookies;
-
-        if (file_exists($cookieFile)) {
-            $this->load($cookieFile);
+        if (file_exists($filename)) {
+            $this->load($filename);
         }
     }
 
@@ -43,10 +34,9 @@ class DatabaseCookieJar extends CookieJar
     /**
      * Saves the cookies to a file.
      *
-     * @param  string  $filename  File to save
      * @throws RuntimeException if the file cannot be found or created
      */
-    public function save($filename)
+    public function save(string $filename): void
     {
         $json = [];
         foreach ($this as $cookie) {
@@ -56,7 +46,7 @@ class DatabaseCookieJar extends CookieJar
             }
         }
 
-        $jsonStr = \GuzzleHttp\json_encode($json);
+        $jsonStr = Utils::jsonEncode($json);
         if (false === file_put_contents($filename, $jsonStr, LOCK_EX)) {
             throw new RuntimeException("Unable to save file $filename");
         }
@@ -67,10 +57,9 @@ class DatabaseCookieJar extends CookieJar
      *
      * Old cookies are kept unless overwritten by newly loaded ones.
      *
-     * @param  string  $filename  Cookie file to load.
      * @throws RuntimeException if the file cannot be loaded.
      */
-    public function load($filename)
+    public function load(string $filename): void
     {
         $json = file_get_contents($filename);
         if (false === $json) {
@@ -79,7 +68,7 @@ class DatabaseCookieJar extends CookieJar
             return;
         }
 
-        $data = \GuzzleHttp\json_decode($json, true);
+        $data = Utils::jsonDecode($json, true);
         if (is_array($data)) {
             foreach (json_decode($json, true) as $cookie) {
                 $this->setCookie(new SetCookie($cookie));
@@ -88,5 +77,4 @@ class DatabaseCookieJar extends CookieJar
             throw new RuntimeException("Invalid cookie file: $filename");
         }
     }
-
 }

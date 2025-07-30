@@ -3,23 +3,22 @@
 namespace MyobAdvanced\Request;
 
 use ArrayAccess;
-use ArrayIterator;
 use Illuminate\Support\Collection;
 use IteratorAggregate;
 use MyobAdvanced\AbstractObject;
 use MyobAdvanced\Traits\HasExpands;
 use MyobAdvanced\Traits\HasFilters;
+use MyobAdvanced\Traits\HasIterableResponse;
 use MyobAdvanced\Traits\HasSelects;
 
 class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
 {
-    use HasFilters, HasSelects, HasExpands;
+    use HasFilters, HasSelects, HasExpands, HasIterableResponse;
 
-    protected $page = 1;
-    protected $pageSize = 1000;
-    /** @var Collection */
-    protected $results;
-    protected $resultCount = 0;
+    protected int $page = 1;
+    protected int $pageSize = 1000;
+    protected Collection $results;
+    protected int $resultCount = 0;
 
     public function __construct($class, $myobAdvanced, $pageSize = null)
     {
@@ -32,10 +31,7 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
         parent::__construct($class, $myobAdvanced);
     }
 
-    /**
-     * @return AbstractObject|Collection
-     */
-    public function formatResponse()
+    public function formatResponse(): AbstractObject|Collection
     {
         $this->results = collect();
         foreach ($this->response->object() as $object) {
@@ -51,10 +47,7 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
         return $this->results;
     }
 
-    /**
-     * @return $this|false
-     */
-    public function next()
+    public function next(): false|static
     {
         // If the number of results is less than the page size then we have to have reached the last page
         if ($this->resultCount < $this->pageSize) {
@@ -92,44 +85,14 @@ class SearchRequest extends Request implements IteratorAggregate, ArrayAccess
         return $values;
     }
 
-    public function getIterator()
-    {
-        return new ArrayIterator($this->results->toArray());
-    }
-
-    public function offsetGet($offset)
-    {
-        return $this->results->offsetGet($offset);
-    }
-
-    public function offsetSet($offset, $value)
-    {
-        $this->results->offsetSet($offset, $value);
-    }
-
-    public function offsetUnset($offset)
-    {
-        $this->results->offsetUnset($offset);
-    }
-
-    public function offsetExists($offset)
-    {
-        $this->results->offsetExists($offset);
-    }
-
-    public function shift($count = 1)
-    {
-        return $this->results->shift($count);
-    }
-
-    public function setPage(int $page)
+    public function setPage(int $page): static
     {
         $this->page = $page;
 
         return $this;
     }
 
-    public function setPageSize(int $pageSize)
+    public function setPageSize(int $pageSize): static
     {
         $this->pageSize = $pageSize;
 

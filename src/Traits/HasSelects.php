@@ -4,7 +4,7 @@ namespace MyobAdvanced\Traits;
 
 trait HasSelects
 {
-    protected $selects = [];
+    protected array $selects = [];
 
     public function setSelects($selects): self
     {
@@ -15,8 +15,15 @@ trait HasSelects
 
     public function addSelect($select): self
     {
-        $this->selects[$select] = $select;
+        if (!in_array($select, $this->selects)) {
+            $this->selects[] = $select;
+        }
 
         return $this;
+    }
+
+    public function getSelects(): array
+    {
+        return $this->selects;
     }
 }

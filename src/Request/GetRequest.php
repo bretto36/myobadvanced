@@ -3,80 +3,24 @@
 namespace MyobAdvanced\Request;
 
 use MyobAdvanced\AbstractObject;
+use MyobAdvanced\Traits\HasExpands;
+use MyobAdvanced\Traits\HasSelects;
 
 class GetRequest extends Request
 {
-    protected $id;
+    use HasSelects, HasExpands;
 
-    protected $selects = [];
-    protected $expands = [];
-
-    public function __construct($class, $myobAdvanced, $id)
+    public function __construct($class, $myobAdvanced, protected string $id)
     {
-        $this->id = $id;
-
         return parent::__construct($class, $myobAdvanced);
     }
 
-    public function getUri()
+    public function getUri(): string
     {
         return parent::getUri() . '/' . $this->id;
     }
 
-    /**
-     * @param $expands
-     * @return $this
-     */
-    public function setExpands($expands): Request
-    {
-        $this->expands = $expands;
-
-        return $this;
-    }
-
-    /**
-     * @param $expand
-     * @return $this
-     */
-    public function addExpand($expand): Request
-    {
-        if (!is_array($expand)) {
-            $expand = [$expand];
-        }
-
-        foreach ($expand as $value) {
-            $this->expands[$value] = $value;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param $selects
-     * @return $this
-     */
-    public function setSelects($selects): Request
-    {
-        $this->selects = $selects;
-
-        return $this;
-    }
-
-    /**
-     * @param $select
-     * @return $this
-     */
-    public function addSelect($select): Request
-    {
-        $this->selects[$select] = $select;
-
-        return $this;
-    }
-
-    /**
-     * @return AbstractObject
-     */
-    protected function formatResponse()
+    protected function formatResponse(): AbstractObject
     {
         return new $this->class($this->response->object());
     }

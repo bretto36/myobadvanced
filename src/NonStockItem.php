@@ -84,14 +84,14 @@ use Carbon\Carbon;
  */
 class NonStockItem extends AbstractObject
 {
-    public $expands = [
+    public array $expands = [
         'Attributes' => [Attribute::class],
         //'CrossReferences' => [CrossReference::class],
         //'SalesCategories' => [SalesCategory::class],
         //'VendorDetails' => [VendorDetail::class],
     ];
 
-    protected $dates = [
+    protected array $dates = [
         'CreatedDateTime',
         'EffectiveDate',
         'LastModifiedDateTime',
