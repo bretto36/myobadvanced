@@ -2,6 +2,8 @@
 
 namespace MyobAdvanced;
 
+use Illuminate\Support\Collection;
+
 /**
  * @method string getApplyOverdueCharges()
  * @method self setApplyOverdueCharges(string $value)
@@ -48,12 +50,12 @@ namespace MyobAdvanced;
  * @method string getTerms()
  * @method self setTerms(string $value)
  *
- * @method Attribute[] getAttributes()
+ * @method Attribute[]|Collection getAttributes()
  * @method self setAttributes(array $value)
  */
 class CustomerClass extends AbstractObject
 {
-    public $expands = [
+    public array $expands = [
         'Attributes' => [Attribute::class],
     ];
 }

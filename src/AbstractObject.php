@@ -3,7 +3,6 @@
 namespace MyobAdvanced;
 
 use Carbon\Carbon;
-use PHPUnit\Runner\Exception;
 use stdClass;
 
 /**
@@ -11,20 +10,21 @@ use stdClass;
  */
 abstract class AbstractObject
 {
-    public $endpoint = 'Default';
-    public $endpointVersion = '20.200.001';
-    public $entity;
+    public string $endpoint = 'Default';
+    public string $endpointVersion = '20.200.001';
+    public string $entity;
 
     // The underlying object from the API
-    public $object;
+    public stdClass $object;
     // A hash that is stored to determine if the entity has changed when save is called
-    public $hash;
+    public string $hash;
     // If true this means the object already has an ID associated with it and any save will attempt to do a PUT request
-    public $saved = false;
+    public bool $saved = false;
 
-    public $expands = [];
+    public array $expands = [];
+    public array $expandedObjects = [];
 
-    protected $dates = [
+    protected array $dates = [
         'CreatedDateTime',
         'LastModifiedDateTime',
     ];
@@ -40,17 +40,17 @@ abstract class AbstractObject
         $this->resetHash();
     }
 
-    public function resetHash()
+    public function resetHash(): void
     {
         $this->hash = $this->getHash();
     }
 
-    public function getObject()
+    public function getObject(): stdClass
     {
         return $this->object;
     }
 
-    public function loadObject($object)
+    public function loadObject($object): void
     {
         $object = is_object($object) ? $object : json_decode($object, false);
 
@@ -62,7 +62,7 @@ abstract class AbstractObject
         foreach ($this->expands as $key => $type) {
             if (isset($this->object->$key)) {
                 if (is_array($type)) {
-                    $this->$key = collect();
+                    $this->expandedObjects[$key] = collect();
 
                     // Only set the value if it's an array
                     if (!is_array($this->object->$key)) {
@@ -72,10 +72,10 @@ abstract class AbstractObject
                     $type = array_shift($type);
 
                     foreach ($this->object->$key as $subObject) {
-                        $this->$key->push(new $type($subObject));
+                        $this->expandedObjects[$key]->push(new $type($subObject));
                     }
                 } else {
-                    $this->$key = new $type($this->object->$key);
+                    $this->expandedObjects[$key] = new $type($this->object->$key);
                 }
             }
         }
@@ -91,7 +91,7 @@ abstract class AbstractObject
         return $this->endpoint;
     }
 
-    public function setEndpoint($endpoint)
+    public function setEndpoint($endpoint): static
     {
         $this->endpoint = $endpoint;
 
@@ -103,7 +103,7 @@ abstract class AbstractObject
         return $this->endpointVersion;
     }
 
-    public function setEndpointVersion($endpointVersion)
+    public function setEndpointVersion($endpointVersion): static
     {
         $this->endpointVersion = $endpointVersion;
 
@@ -115,7 +115,7 @@ abstract class AbstractObject
         return $this->entity ?? class_basename($this);
     }
 
-    public function setEntity($entity)
+    public function setEntity($entity): static
     {
         $this->entity = $entity;
 
@@ -132,12 +132,12 @@ abstract class AbstractObject
         return ($this->getHash() != $this->hash);
     }
 
-    public function isSaved()
+    public function isSaved(): bool
     {
         return $this->saved;
     }
 
-    public function save()
+    public function save(): bool
     {
         // Check for ID
         if ($this->isSaved()) {
@@ -156,7 +156,7 @@ abstract class AbstractObject
     public function get($field, $default)
     {
         if (isset($this->expands[$field])) {
-            return $this->$field ?? null;
+            return $this->expandedObjects[$field] ?? null;
         }
 
         // This is an expandable option therefore it needs to be a
@@ -177,7 +177,7 @@ abstract class AbstractObject
         return $value;
     }
 
-    public function set($field, $value)
+    public function set($field, $value): static
     {
         if (is_a($value, Carbon::class)) {
             $value = $value->format('Y-m-d\TH:i:s');
@@ -188,12 +188,12 @@ abstract class AbstractObject
         return $this;
     }
 
-    public function has($field)
+    public function has($field): bool
     {
         return (isset($this->object->$field->value) && null !== $this->object->$field->value);
     }
 
-    public function is($field)
+    public function is($field): bool
     {
         return (isset($this->object->$field->value) && $this->object->$field->value);
     }
@@ -211,6 +211,6 @@ abstract class AbstractObject
             }
         }
 
-        throw new Exception('Method does not exist: ' . $name . ' for class: ' . self::class);
+        throw new \Exception('Method does not exist: ' . $name . ' for class: ' . self::class);
     }
 }

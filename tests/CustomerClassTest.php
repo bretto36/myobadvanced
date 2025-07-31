@@ -28,7 +28,16 @@ class CustomerClassTest extends Base
         Http::fakeSequence()->push($this->loadJsonResponse('customer_class'));
 
         /** @var CustomerClass $customerClass */
-        $customerClass = $this->myobAdvanced->get(CustomerClass::class, 'CUSTDFT')->send();
+        $customerClass = $this->myobAdvanced->get(CustomerClass::class, 'CUSTDFT')
+            ->setSelects([
+                'ClassID',
+                'Description',
+                'LastModifiedDateTime',
+                'Attributes/AttributeID',
+                'Attributes/Description',
+            ])
+            ->addSelect('ARAccount')
+            ->send();
 
         $this->assertEquals('CUSTDFT', $customerClass->getClassID());
         $this->assertEquals('Customer Default', $customerClass->getDescription());
@@ -40,5 +49,12 @@ class CustomerClassTest extends Base
 
         $this->assertEquals('ENTITYTYPE', $attribute->getAttributeID());
         $this->assertEquals('Entity Type', $attribute->getDescription());
+
+        $attribute->setDescription('New Entity Type Description');
+
+        $this->assertEquals('New Entity Type Description', $attribute->getDescription());
+
+        $attribute->hasDescription();
+        $attribute->isDescription();
     }
 }

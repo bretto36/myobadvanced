@@ -125,7 +125,7 @@ use Carbon\Carbon;
  */
 class Contact extends AbstractObject
 {
-    public $expands = [
+    public array $expands = [
         'Address'    => Address::class,
         //'Activities' => Activity::class,
         'Attributes' => Attribute::class,
@@ -136,7 +136,7 @@ class Contact extends AbstractObject
         //'UserInfo' => UserInfo::class,
     ];
 
-    protected $dates = [
+    protected array $dates = [
         'DateOfBirth',
         'LastIncomingActivity',
         'LastModifiedDateTime',

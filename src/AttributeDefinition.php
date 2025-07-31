@@ -28,7 +28,7 @@ use MyobAdvanced\AttributeDefinition\Value;
  */
 class AttributeDefinition extends AbstractObject
 {
-    public $expands = [
+    public array $expands = [
         'Values' => [Value::class],
     ];
 }

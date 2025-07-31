@@ -13,7 +13,7 @@ use MyobAdvanced\Contact;
  */
 class CustomerContact extends AbstractObject
 {
-    public $expands = [
+    public array $expands = [
         'Contact' => Contact::class,
     ];
 }

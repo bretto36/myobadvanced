@@ -4,13 +4,13 @@ namespace MyobAdvanced;
 
 class Configuration
 {
-    public $host;
-    public $username;
-    public $password;
-    public $company;
-    public $branch;
+    public string $host;
+    public string $username;
+    public string $password;
+    public string $company;
+    public string $branch;
 
-    protected $options = [];
+    protected array $options = [];
 
     public function __construct($host = '', $username = '', $password = '', $company = '', $branch = '')
     {
@@ -21,48 +21,48 @@ class Configuration
         $this->branch   = $branch;
     }
 
-    public function setOptions($options)
+    public function setOptions($options): static
     {
         $this->options = $options;
 
         return $this;
     }
 
-    public function getHost()
+    public function getHost(): string
     {
-        if (substr($this->host, 0, 4) != 'http') {
+        if (!str_starts_with($this->host, 'http')) {
             $this->host = 'https://' . $this->host;
         }
 
         return $this->host;
     }
 
-    public function getUsername()
+    public function getUsername(): string
     {
         return $this->username;
     }
 
-    public function getPassword()
+    public function getPassword(): string
     {
         return $this->password;
     }
 
-    public function getCompany()
+    public function getCompany(): string
     {
         return $this->company;
     }
 
-    public function getBranch()
+    public function getBranch(): string
     {
         return $this->branch;
     }
 
-    public function getCookieHost()
+    public function getCookieHost(): string
     {
-        return strpos($this->getHost(), 'https://') === 0 ? substr($this->getHost(), strlen('https://')) : $this->getHost();
+        return str_starts_with($this->getHost(), 'https://') ? substr($this->getHost(), strlen('https://')) : $this->getHost();
     }
 
-    public function getOptions()
+    public function getOptions(): array
     {
         return $this->options;
     }

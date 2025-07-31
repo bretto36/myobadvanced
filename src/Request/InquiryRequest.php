@@ -3,23 +3,21 @@
 namespace MyobAdvanced\Request;
 
 use ArrayAccess;
-use ArrayIterator;
 use Illuminate\Support\Collection;
 use IteratorAggregate;
 use MyobAdvanced\AbstractObject;
 use MyobAdvanced\Traits\HasExpands;
+use MyobAdvanced\Traits\HasIterableResponse;
 use MyobAdvanced\Traits\HasSelects;
 
 class InquiryRequest extends Request implements IteratorAggregate, ArrayAccess
 {
-    use HasSelects, HasExpands;
+    use HasSelects, HasExpands, HasIterableResponse;
 
-    protected $method = 'PUT';
+    protected string $method = 'PUT';
     protected $requestObject;
-    /** @var Collection */
-    protected $results;
-    protected $resultCount = 0;
-    protected $rootElement = 'Results';
+    protected int $resultCount = 0;
+    protected string $rootElement = 'Results';
 
     public function __construct($class, $myobAdvanced, $requestObject = null)
     {
@@ -36,10 +34,7 @@ class InquiryRequest extends Request implements IteratorAggregate, ArrayAccess
         return $this->requestObject;
     }
 
-    /**
-     * @return AbstractObject|Collection
-     */
-    public function formatResponse()
+    public function formatResponse(): AbstractObject|Collection
     {
         $this->results = collect();
 
@@ -71,35 +66,5 @@ class InquiryRequest extends Request implements IteratorAggregate, ArrayAccess
         }
 
         return $values;
-    }
-
-    public function getIterator()
-    {
-        return new ArrayIterator($this->results->toArray());
-    }
-
-    public function offsetGet($offset)
-    {
-        return $this->results->offsetGet($offset);
-    }
-
-    public function offsetSet($offset, $value)
-    {
-        $this->results->offsetSet($offset, $value);
-    }
-
-    public function offsetUnset($offset)
-    {
-        $this->results->offsetUnset($offset);
-    }
-
-    public function offsetExists($offset)
-    {
-        $this->results->offsetExists($offset);
-    }
-
-    public function shift($count = 1)
-    {
-        return $this->results->shift($count);
     }
 }

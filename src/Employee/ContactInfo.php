@@ -42,7 +42,7 @@ use MyobAdvanced\Address;
  */
 class ContactInfo extends AbstractObject
 {
-    public $expands = [
+    public array $expands = [
         'Address' => Address::class,
     ];
 }

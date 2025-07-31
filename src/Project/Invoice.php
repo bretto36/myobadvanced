@@ -49,7 +49,7 @@ use MyobAdvanced\AbstractObject;
  */
 class Invoice extends AbstractObject
 {
-    protected $dates = [
+    protected array $dates = [
         'ARDocDate',
         'ProFormaDate',
     ];

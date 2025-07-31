@@ -6,7 +6,7 @@ use Illuminate\Support\Carbon;
 
 trait HasFilters
 {
-    protected $filters = [];
+    protected array $filters = [];
 
     public function setFilters($filters): self
     {
@@ -42,5 +42,10 @@ trait HasFilters
         }
 
         return $field . ' ' . $operation . ' ' . $value;
+    }
+
+    public function getFilters(): array
+    {
+        return $this->filters;
     }
 }

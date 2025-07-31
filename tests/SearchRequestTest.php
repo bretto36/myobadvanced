@@ -10,6 +10,41 @@ use MyobAdvanced\Customer;
 
 class SearchRequestTest extends Base
 {
+    public function test_get_request()
+    {
+        $searchRequest = $this->myobAdvanced->search(Customer::class)
+            ->setPage(10)
+            ->setPageSize(1000)
+            ->setSelects([
+                'ClassID',
+                'Description',
+                'LastModifiedDateTime',
+                'Attributes/AttributeID',
+                'Attributes/Description',
+            ])
+            ->addSelect('ARAccount')
+            ->setExpands(['Attributes'])
+            ->addExpand('BillingContact');
+
+        $this->assertEquals([
+            'ClassID',
+            'Description',
+            'LastModifiedDateTime',
+            'Attributes/AttributeID',
+            'Attributes/Description',
+            'ARAccount',
+        ], $searchRequest->getSelects());
+
+        $this->assertEquals(['Attributes', 'BillingContact'], $searchRequest->getExpands());
+
+        $this->assertEquals([
+            '$select' => 'ClassID,Description,LastModifiedDateTime,Attributes/AttributeID,Attributes/Description,ARAccount',
+            '$expand' => 'Attributes,BillingContact',
+            '$top'    => 1000,
+            '$skip'   => 9000,
+        ], $searchRequest->getQuery());
+    }
+
     public function testDateFilter()
     {
         Http::fakeSequence()->push($this->loadJsonResponse('customers'));
