@@ -3,7 +3,6 @@
 namespace MyobAdvanced\Traits;
 
 use Illuminate\Support\Collection;
-use MyobAdvanced\Request\Request;
 
 trait HasIterableResponse
 {

@@ -30,7 +30,7 @@ class CompaniesStructureTest extends Base
         $this->assertEquals('81d2a148-9163-e411-9b56-001e4f4a3584', $companyStructure->getId());
         $this->assertEquals('ASTRA', $companyStructure->getCompanyID());
         $this->assertEquals('Astra Partners', $companyStructure->getCompanyName());
-        $this->assertEquals(true, $companyStructure->getCompanyStatus());
+        $this->assertTrue($companyStructure->getCompanyStatus());
         $this->assertEquals('ASTRA', $companyStructure->getBranchID());
         $this->assertEquals('Astra Partners', $companyStructure->getBranchName());
     }

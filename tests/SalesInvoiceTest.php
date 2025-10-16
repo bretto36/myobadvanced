@@ -54,7 +54,7 @@ class SalesInvoiceTest extends Base
         $this->assertEquals('X053XUS120', $detail->getInventoryID());
         $this->assertEquals(1, $detail->getLineNbr());
         $this->assertEquals(5, $detail->getQty());
-        $this->assertEquals(true, $detail->getManualDiscount());
+        $this->assertTrue($detail->getManualDiscount());
         $this->assertEquals('MLB', $detail->getWarehouseID());
     }
 
@@ -99,7 +99,7 @@ class SalesInvoiceTest extends Base
         $this->assertEquals('X053XUS120', $detail->getInventoryID());
         $this->assertEquals(1, $detail->getLineNbr());
         $this->assertEquals(5, $detail->getQty());
-        $this->assertEquals(true, $detail->getManualDiscount());
+        $this->assertTrue($detail->getManualDiscount());
         $this->assertEquals('MLB', $detail->getWarehouseID());
     }
 }
