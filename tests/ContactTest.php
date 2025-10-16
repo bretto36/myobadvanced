@@ -20,7 +20,7 @@ class ContactTest extends Base
 
         $this->assertEquals('8aa2b525-0f96-e411-b335-e006e6dac1d7', $contact->getId());
         $this->assertEquals('3909', $contact->getContactID());
-        $this->assertEquals(true, $contact->getActive());
+        $this->assertTrue($contact->getActive());
         $this->assertEquals('2014-12-25 02:16:29', $contact->getLastModifiedDateTime()->format('Y-m-d H:i:s'));
         $this->assertEquals('Contact', $contact->getType());
     }
@@ -34,7 +34,7 @@ class ContactTest extends Base
 
         $this->assertEquals('8aa2b525-0f96-e411-b335-e006e6dac1d7', $contact->getId());
         $this->assertEquals('3909', $contact->getContactID());
-        $this->assertEquals(true, $contact->getActive());
+        $this->assertTrue($contact->getActive());
         $this->assertEquals('2014-12-25 02:16:29', $contact->getLastModifiedDateTime()->format('Y-m-d H:i:s'));
         $this->assertEquals('Contact', $contact->getType());
     }

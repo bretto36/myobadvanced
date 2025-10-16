@@ -2,7 +2,9 @@
 
 namespace MyobAdvanced\Traits;
 
-use MyobAdvanced\Request\Request;
+use MyobAdvanced\Request\GetRequest;
+use MyobAdvanced\Request\InquiryRequest;
+use MyobAdvanced\Request\SearchRequest;
 
 trait HasExpands
 {
@@ -18,9 +20,9 @@ trait HasExpands
 
     /**
      * @param $expand
-     * @return $this
+     * @return InquiryRequest|GetRequest|SearchRequest|HasExpands
      */
-    public function addExpand($expand): Request
+    public function addExpand($expand): self
     {
         if (!is_array($expand)) {
             $expand = [$expand];

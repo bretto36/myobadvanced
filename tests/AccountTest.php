@@ -23,8 +23,8 @@ class AccountTest extends Base
         $this->assertEquals('100000', $account->getAccountCD());
         $this->assertEquals('CASHASSET', $account->getAccountClass());
         $this->assertEquals('', $account->getAccountGroup());
-        $this->assertEquals(true, $account->getActive());
-        $this->assertEquals(true, $account->getCashAccount());
+        $this->assertTrue($account->getActive());
+        $this->assertTrue($account->getCashAccount());
         $this->assertEquals(2, $account->getChartOfAccountsOrder());
         $this->assertEquals('', $account->getConsolidationAccount());
         $this->assertEquals('2014-10-23 01:01:51', $account->getCreatedDateTime()->format('Y-m-d H:i:s'));
@@ -32,12 +32,12 @@ class AccountTest extends Base
         $this->assertEquals('Petty Cash AUD', $account->getDescription());
         $this->assertEquals('2014-10-23 01:24:34', $account->getLastModifiedDateTime()->format('Y-m-d H:i:s'));
         $this->assertEquals('Detail', $account->getPostOption());
-        $this->assertEquals(false, $account->getRequireUnits());
+        $this->assertFalse($account->getRequireUnits());
         $this->assertEquals('', $account->getRevaluationRateType());
-        $this->assertEquals(false, $account->getSecured());
+        $this->assertFalse($account->getSecured());
         $this->assertEquals('', $account->getTaxCategory());
         $this->assertEquals('Asset', $account->getType());
-        $this->assertEquals(false, $account->getUseDefaultSubaccount());
+        $this->assertFalse($account->getUseDefaultSubaccount());
     }
 
     public function testAccountGet()
@@ -52,8 +52,8 @@ class AccountTest extends Base
         $this->assertEquals('100000', $account->getAccountCD());
         $this->assertEquals('CASHASSET', $account->getAccountClass());
         $this->assertEquals('', $account->getAccountGroup());
-        $this->assertEquals(true, $account->getActive());
-        $this->assertEquals(true, $account->getCashAccount());
+        $this->assertTrue($account->getActive());
+        $this->assertTrue($account->getCashAccount());
         $this->assertEquals(2, $account->getChartOfAccountsOrder());
         $this->assertEquals('', $account->getConsolidationAccount());
         $this->assertEquals('2014-10-23 01:01:51', $account->getCreatedDateTime()->format('Y-m-d H:i:s'));
@@ -61,12 +61,12 @@ class AccountTest extends Base
         $this->assertEquals('Petty Cash AUD', $account->getDescription());
         $this->assertEquals('2014-10-23 01:24:34', $account->getLastModifiedDateTime()->format('Y-m-d H:i:s'));
         $this->assertEquals('Detail', $account->getPostOption());
-        $this->assertEquals(false, $account->getRequireUnits());
+        $this->assertFalse($account->getRequireUnits());
         $this->assertEquals('', $account->getRevaluationRateType());
-        $this->assertEquals(false, $account->getSecured());
+        $this->assertFalse($account->getSecured());
         $this->assertEquals('', $account->getTaxCategory());
         $this->assertEquals('Asset', $account->getType());
-        $this->assertEquals(false, $account->getUseDefaultSubaccount());
+        $this->assertFalse($account->getUseDefaultSubaccount());
 
 
         //$this->assertCount(5, $accounts);

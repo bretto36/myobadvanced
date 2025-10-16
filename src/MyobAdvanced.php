@@ -102,7 +102,7 @@ class MyobAdvanced
      * @param  object|null  $requestObject
      * @return InquiryRequest
      */
-    public function inquiry($className, object $requestObject = null)
+    public function inquiry($className, ?object $requestObject = null)
     {
         return new InquiryRequest($className, $this, $requestObject);
     }

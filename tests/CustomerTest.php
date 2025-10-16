@@ -2,7 +2,6 @@
 
 namespace MyobAdvanced\Tests;
 
-use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
 use MyobAdvanced\Customer;
 
