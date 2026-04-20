@@ -52,3 +52,4 @@ Thumbs.db
 /tests/RealTest.php
 /tests/test-now.json
 auth.json
+.phpunit.cache/
